@@ -1,0 +1,65 @@
+.best__people {
+  padding-top: 180px;
+
+  .container__flex {
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+
+    .block__text {
+      .title {
+        color: #FFF;
+        font-family: Futura Md BT;
+        font-size: 64px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+
+      .text {
+        color: #FFF;
+        font-family: Futura Bk BT;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        padding: 32px 0px 40px 0px;
+      }
+    }
+
+    .block__img {
+      width: 600px;
+      height: 508px;
+      position: relative;
+
+      .blur {
+        border-radius: 419px;
+        background: conic-gradient(from 180deg at 50% 50%, #BA0000 0deg, rgba(186, 0, 0, 0.28) 360deg);
+        mix-blend-mode: hard-light;
+        filter: blur(125px);
+        width: 580.548px;
+        height: 586.348px;
+        transform: rotate(71.44deg);
+      }
+
+      .img1 {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+      }
+
+      .img2 {
+        position: absolute;
+
+        top: 0px;
+        right: 0px;
+      }
+
+      .img3 {
+        position: absolute;
+        bottom: 0px;
+        right: 20px;
+      }
+    }
+  }
+}

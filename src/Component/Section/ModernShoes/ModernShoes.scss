@@ -1,0 +1,64 @@
+.modern__shoes {
+  padding-top: 180px;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .img__block {
+      margin-right: 130px;
+      position: relative;
+      width: 487px;
+        height: 357px;
+      .block {
+        position: absolute;
+        top: 0;
+        width: 357px;
+        height: 357px;
+        border-radius: 111px;
+        background: conic-gradient(from 9deg at 46.78% 51.75%, #BA0000 0deg, #BA0000 360deg);
+        mix-blend-mode: hard-light;
+        filter: blur(125px);
+      }
+
+      .block2 {
+        position: absolute;
+        top: 0;
+        border-radius: 10px;
+        background: #FFF;
+        mix-blend-mode: soft-light;
+        backdrop-filter: blur(2px);
+        width: 300px;
+        height: 300px;
+      }
+      img {
+        position: absolute;
+        top: 0;
+        left: -40px;
+      }
+    }
+
+    .block__shoes {
+      .title {
+        color: #FFF;
+        font-family: Futura Md BT;
+        font-size: 64px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+
+      }
+
+      .text {
+        color: #FFF;
+        font-family: Futura Bk BT;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        padding: 24px 0px 40px 0px;
+      }
+    }
+  }
+}

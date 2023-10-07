@@ -1,0 +1,147 @@
+.footer {
+  padding-top: 180px;
+
+  .top__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 80px;
+    .footer__email {
+      color: #FFF;
+      font-family: Futura LT;
+      font-size: 48px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 64px;
+      text-transform: capitalize;
+
+      .title {
+        color: #FFF;
+        font-family: Futura LT;
+        font-size: 48px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 64px;
+        text-transform: capitalize;
+        padding-bottom: 32px;
+      }
+
+      .form {
+        position: relative;
+        width: 399px;
+        height: 56px;
+
+        .email__form {
+          color: rgba(255, 255, 255, 0.50);
+          font-family: Futura LT;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 24px;
+          text-transform: capitalize;
+          background-color: transparent;
+          padding-left: 80px;
+          border-radius: 80px;
+          border: 1px solid #FFF;
+          width: 349px;
+          height: 56px;
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+
+        .btn__form {
+          padding: 16px 40px;
+          border-radius: 80px;
+          background: #FFF;
+          color: #000;
+          font-family: Futura LT;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 24px;
+          text-transform: capitalize;
+          position: absolute;
+          top: 0;
+          right: 0;
+        }
+      }
+
+      .logo__nike {
+        padding-top: 88px;
+      }
+    }
+
+    .footer__navigation {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+
+      .nav {
+        padding-bottom: 50px;
+
+        h5 {
+          color: #FFF;
+          font-family: Futura XBlkCnIt BT;
+          font-size: 24px;
+          font-style: italic;
+          font-weight: 400;
+          line-height: normal;
+          padding-bottom: 24px;
+        }
+
+        ul li {
+          padding-bottom: 16px;
+          color: #FFF;
+          font-family: Futura LtCn BT;
+          font-size: 20px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+        }
+      }
+
+      .navigation_max {
+        ul li {
+          padding-bottom: 18px;
+        }
+      }
+
+      .block__navigation {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        padding-right: 40px;
+      }
+    }
+  }
+
+  .bottom__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 32px 0px;
+
+    p {
+      display: flex;
+      align-items: center;
+      span {
+        padding-right: 10px;
+        color: #FFF;
+        font-family: Futura Bk BT;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        text-transform: capitalize;
+      }
+    }
+
+    .svg__flex {
+      width: 190px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+}

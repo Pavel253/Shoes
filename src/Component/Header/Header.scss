@@ -1,0 +1,113 @@
+.header {
+  margin-top: 40px;
+  height: 36px;
+  .container {
+    width: 1300px;
+    margin: 0 auto;
+
+    .header__navigation {
+      position: relative;
+      z-index: 300;
+      .menu__header {
+        position: absolute;
+        width: 44px;
+        height: 26px;
+        margin-right: 40px;
+        left: 0;
+        top: 0;
+        cursor: pointer;
+        transition: all 0.4s ease;
+        .line {
+          position: absolute;
+          width: 44px;
+          height: 2px;
+          color: aliceblue;
+          background-color: aliceblue;
+          transition: all 0.4s ease;
+
+        }
+
+        .line:nth-child(1) {
+          top: 0;
+
+        }
+
+        .line:nth-child(2) {
+          top: 10px;
+          left: 0;
+          right: 0;
+          margin-left: auto;
+          margin-right: auto;
+        }
+
+        .line:nth-child(3) {
+          top: 20px;
+          right: 0;
+        }
+      }
+
+      .menu__header.active {
+        transition: all 0.4s ease;
+
+        .line:nth-child(1) {
+          top: 0;
+          width: 20px;
+        }
+
+        .line:nth-child(2) {
+          top: 10px;
+          width: 30px;
+          left: 0;
+          right: 0;
+          margin-left: auto;
+          margin-right: auto;
+        }
+
+        .line:nth-child(3) {
+          top: 20px;
+          width: 20px;
+          right: 0;
+        }
+      }
+
+      .menu__navigation {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 322px;
+        position: absolute;
+        left: 90px;
+        top: 5px;
+        li {
+
+          a {
+            color: #FFF;
+            font-family: Futura Bk BT;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 16px;
+            text-transform: uppercase;
+          }
+        }
+      }
+
+      .logo {
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: auto;
+      }
+
+      .menu__user {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 170px;
+        position: absolute;
+        right: 0;
+        top: 5px;
+      }
+    }
+  }
+}

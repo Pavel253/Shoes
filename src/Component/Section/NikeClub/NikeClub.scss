@@ -1,0 +1,56 @@
+.nike__club {
+  padding-top: 180px;
+  position: relative;
+  height: 517px; 
+  .banner {
+    position: absolute;
+    top: 110px;
+    width: 1200px;
+    height: 300px;
+    border-radius: 10px;
+    border: 1px solid #FFF;
+    backdrop-filter: blur(2px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    left: 0;
+    right: 0;
+    margin: auto;
+    .block__text {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 63px 0px 0px 40px;
+      .title {
+        color: #FFF;
+        font-family: Futura Md BT;
+        font-size: 48px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+
+      .text {
+        color: #FFF;
+        font-family: Futura Bk BT;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        text-transform: capitalize;
+        padding: 16px 0px 32px 0px;
+      }
+    }
+
+    .logo {
+      margin-right: 40px;
+    }
+  }
+
+  .shoes {
+    position: absolute;
+    right: 0;
+    width: 798px;
+height: 376px; 
+  }
+}

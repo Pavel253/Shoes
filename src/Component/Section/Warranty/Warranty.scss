@@ -1,0 +1,41 @@
+.warranty {
+  padding-top: 180px;
+  .warranty__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .card {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .block__text {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding-left: 15px;
+        h5 {
+          color: #FFF;
+          font-family: Futura Hv BT;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+          text-transform: capitalize;
+        }
+
+        span {
+          padding-top: 8px;
+          color: #FFF;
+          font-family: Futura Bk BT;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+          text-transform: capitalize;
+        }
+      }
+    }
+  }
+}

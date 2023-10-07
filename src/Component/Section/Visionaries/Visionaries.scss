@@ -1,0 +1,56 @@
+.section__visionaries {
+  padding-top: 180px;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .block__visionaries {
+      
+      .title {
+        color: #FFF;
+        font-family: Futura Md BT;
+        font-size: 48px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        text-transform: uppercase;
+        padding-bottom: 32px;
+        span {
+          color: #BA0000;
+        }
+      }
+
+      .container__text {
+        display: flex;
+        flex-direction: column;
+        width: 621px; 
+
+        .text {
+          color: #FFF;
+          font-family: Futura Bk BT;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+          text-transform: capitalize;
+          padding-bottom: 32px;
+        }
+        .text:nth-child(2) {
+          padding-bottom: 24px;
+        }
+        .text:nth-child(3) {
+          padding-bottom: 24px;
+        }
+        .text:nth-child(4) {
+          padding-bottom: 24px;
+        }
+      }
+
+      .btn__visionaries {
+        width: 241px; 
+      }
+    }
+  }
+}
