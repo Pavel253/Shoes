@@ -6,7 +6,7 @@ import Btn from "../../Button/Btn";
 
 const NikeClub = () => {
   return (
-    <section className="nike__club">
+    <section className="nike__club section">
       <div className="container">
         <div className="banner">
         <div className="block__text">

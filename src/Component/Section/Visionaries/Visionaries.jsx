@@ -5,7 +5,7 @@ import Btn from "../../Button/Btn";
 
 const Visionaries = () => {
   return (
-    <section className="section__visionaries">
+    <section className="section__visionaries section">
       <div className="container">
         <img src={Img} alt="" />
         <div className="block__visionaries">

@@ -7,7 +7,7 @@ import Btn from "../../Button/Btn";
 
 const ModernShoes = () => {
   return (
-    <section className="modern__shoes">
+    <section className="modern__shoes section">
       <div className="container">
         <div className="img__block">
           <div className="block" />

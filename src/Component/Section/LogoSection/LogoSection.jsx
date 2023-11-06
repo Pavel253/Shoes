@@ -13,7 +13,7 @@ import img8 from '../../../Img/Logo/Logo 09.png'
 
 const LogoSection = () => {
   return (
-    <section className='logo__section'>
+    <section className='logo__section section'>
       <div className="container">
         <img src={img1} alt="" />
         <img src={img2} alt="" />

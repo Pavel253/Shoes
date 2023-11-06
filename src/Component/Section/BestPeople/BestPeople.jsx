@@ -10,7 +10,7 @@ import img3 from "../../../Img/BestPeople/Box-2.png";
 
 const BestPeople = () => {
   return (
-    <section className="best__people">
+    <section className="best__people section">
       <div className="container">
         <div className="container__flex">
           <div className="block__text">

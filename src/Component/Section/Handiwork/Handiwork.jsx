@@ -6,7 +6,7 @@ import img2 from '../../../Img/Handiwork/Rectangle 2.png'
 
 const Handiwork = () => {
   return (
-    <section className="handiwork">
+    <section className="handiwork section">
       <div className="container">
         <h2 className="title__handiwork">
           THE ESSENCE <img src={img1} alt="" /> HANDCRAFTED <img src={img2} alt="" />  OF FOOTWEAR.

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./Shoes.scss";
 
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -9,15 +9,13 @@ import "swiper/css/scrollbar";
 
 import { Navigation } from "swiper/modules";
 
-import Image from "../../../Img/Shoes/Image.png";
-import img from "../../../Img/Shoes/Product Image.png";
 import Btn from "../../Button/Btn";
 
-const Shoes = () => {
-  // const card = [{ title: "NIKE SB Dunk High", img: img }];
+const Shoes = ({ shoesData }) => {
+  const [data, setData] = useState('');
 
   return (
-    <section className="shoes">
+    <section className="shoes section">
       <svg
         className="svg"
         height="707"
@@ -45,14 +43,14 @@ const Shoes = () => {
           </radialGradient>
         </defs>
       </svg>
-      <h1 className="title__shoes">AIR JORDAN 1 RETRO HIGH OG</h1>
+      <h1 className="title__shoes">{data.title}</h1>
       <div className="container">
         <div className="container__product">
-          <img src={img} alt="" />
+          <img src={data.fonImage} alt="" />
           <div className="product__title">
-            <h2 className="title">AIR JORDAN 1 RETRO HIGH OG</h2>
+            <h2 className="title">{data.title}</h2>
             <div className="information__product">
-              <span className="price">$275</span>
+              <span className="price">${data.price}</span>
               <div className="size__product">
                 <span className="size__span">Size</span>
                 <span></span>
@@ -84,41 +82,41 @@ const Shoes = () => {
           <Swiper
             grabCursor={true}
             loop={true}
-            spaceBetween={50}
-            slidesPerView={4}
             navigation={{
               nextEl: ".swiper-button-next",
               prevEl: ".swiper-button-prev",
               disabledClass: "swiper-button-disabled",
             }}
             modules={[Navigation]}
+            breakpoints = {{
+              1600: {
+                slidesPerView: 4,
+              },
+              1150: {
+                slidesPerView: 4,
+              },
+              928: {
+                slidesPerView: 3,
+              },
+              769: {
+                slidesPerView: 3,
+              },
+              569: {
+                slidesPerView: 2,
+              },
+              320: {
+                slidesPerView: 2,
+              }
+          }}
             className="slider__product"
           >
-            <SwiperSlide className="card__shoes">
-              <img src={Image} alt="" />
-              <h4>NIKE SB Dunk High</h4>
-            </SwiperSlide>
-            <SwiperSlide className="card__shoes">
-              <img src={Image} alt="" />
-              <h4>NIKE SB Dunk High</h4>
-            </SwiperSlide>
-            <SwiperSlide className="card__shoes">
-              <img src={Image} alt="" />
-              <h4>NIKE SB Dunk High</h4>
-            </SwiperSlide>
-            <SwiperSlide className="card__shoes">
-              <img src={Image} alt="" />
-              <h4>NIKE SB Dunk High</h4>
-            </SwiperSlide>
-            <SwiperSlide className="card__shoes">
-              <img src={Image} alt="" />
-              <h4>NIKE SB Dunk High</h4>
-            </SwiperSlide>
-            <SwiperSlide className="card__shoes">
-              <img src={Image} alt="" />
-              <h4>NIKE SB Dunk High</h4>
-            </SwiperSlide>
-
+            {shoesData.map((shoes, id) => {
+              return (
+                <SwiperSlide key={id} id={id} >
+                  <Card data={data} setData={setData} shoes={shoes}  />
+                </SwiperSlide>
+              );
+            })}
             <div className="container__btn">
               <button className="swiper-button-prev btn__prev">
                 <svg
@@ -169,6 +167,24 @@ const Shoes = () => {
         </div>
       </div>
     </section>
+  );
+};
+
+const Card = ({shoes, data, setData}) => {
+
+  const shoesData = () => {
+    setData(shoes)
+  }
+
+  useEffect(() => {
+    shoesData()
+  }, [])
+
+  return (
+    <div className="card__shoes" onClick={() => shoesData()}>
+      <img src={shoes.image} alt="" />  
+      <h4>{shoes.title}</h4>
+    </div>
   );
 };
 

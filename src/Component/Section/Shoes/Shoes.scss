@@ -127,6 +127,7 @@
             }
 
             img {
+              
               margin-left: 8px;
             }
           }
@@ -160,28 +161,32 @@
         }
 
         .card__shoes {
-          width: 320px;
+          width: 310px;
           height: 195px;
           border: 2px solid #FFF;
           position: relative;
-
+          cursor: pointer;
           h4 {
             color: #FFF;
             font-family: Futura LtCn BT;
             font-size: 24px;
             font-style: normal;
             font-weight: 400;
-            line-height: 0px;
             text-transform: uppercase;
             position: absolute;
             left: 25px;
             top: 120px;
+            z-index: 110;
+            height: 25px;
+          overflow: hidden;
           }
 
           img {
             position: absolute;
             top: -19px;
             left: 22px;
+            width: 229px;
+            height: 117.589px; 
           }
         }
       }

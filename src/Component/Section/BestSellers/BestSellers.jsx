@@ -8,7 +8,7 @@ import img3 from '../../../Img/BestSellers/Men.png'
 
 const BestSellers = () => {
   return (
-    <div className='best__sellers'>
+    <section className='best__sellers section'>
       <div className="container">
         <h2 className='title'>BEST SELLERS</h2>
         <div className="container__photo">
@@ -17,7 +17,7 @@ const BestSellers = () => {
           <img src={img3} alt="" />
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

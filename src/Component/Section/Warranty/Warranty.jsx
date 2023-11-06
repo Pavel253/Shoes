@@ -4,10 +4,10 @@ import './Warranty.scss'
 
 const Warranty = () => {
   return (
-    <section className="warranty">
+    <section className="warranty section">
       <div className="container">
         <div className="warranty__container">
-          <div className="card">
+          <div className="card__warranty">
             <svg
               width="24"
               height="24"
@@ -25,7 +25,7 @@ const Warranty = () => {
               <span>from $29.99</span>
             </div>
           </div>
-          <div className="card">
+          <div className="card__warranty">
             <svg
               width="24"
               height="24"
@@ -43,7 +43,7 @@ const Warranty = () => {
               <span>in store</span>
             </div>
           </div>
-          <div className="card">
+          <div className="card__warranty">
             <svg
               width="24"
               height="24"
@@ -61,7 +61,7 @@ const Warranty = () => {
               <span>at your service</span>
             </div>
           </div>
-          <div className="card">
+          <div className="card__warranty">
             <svg
               width="24"
               height="24"

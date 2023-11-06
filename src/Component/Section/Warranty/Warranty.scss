@@ -1,13 +1,11 @@
 .warranty {
-  padding-top: 180px;
   .warranty__container {
     display: flex;
     justify-content: space-between;
     align-items: center;
 
-    .card {
+    .card__warranty {
       display: flex;
-      justify-content: space-between;
       align-items: center;
 
       .block__text {

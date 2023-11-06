@@ -1,0 +1,1772 @@
+@media screen and (max-width: 1600px) {
+  .container {
+    width: 1200px;
+    margin: 0 auto;
+  }
+
+  .App {
+    .header .container {
+      width: 1200px;
+    }
+
+    .shoes {
+      .title__shoes {
+        width: 1200px;
+        font-size: 118px;
+      }
+
+      .container {
+        .container__product {
+          width: 1200px;
+        }
+
+        .slider {
+          top: 565px;
+
+          .slider__product {
+            .card__shoes {
+              width: 270px;
+            }
+
+            .container__btn {
+              width: 290px;
+            }
+          }
+        }
+      }
+    }
+
+    .best__sellers .container__photo {
+      img {
+        width: 360px;
+      }
+    }
+
+    .sport__time .shoes__container {
+      padding-bottom: 100px;
+
+      .card__shoes {
+        width: 360px;
+
+        .desk {
+          width: 360px;
+        }
+      }
+    }
+
+    .section {
+      padding-top: 140px;
+    }
+
+    .nike__club .shoes {
+      position: absolute;
+      right: 0;
+      width: 538px;
+      height: 346px;
+    }
+
+    .footer {
+      padding-top: 140px;
+    }
+  }
+}
+
+@media screen and (max-width: 1350px) {
+  .container {
+    width: 1000px;
+    margin: 0 auto;
+  }
+
+  .App {
+    .section {
+      padding-top: 100px;
+    }
+
+    .header .container {
+      width: 1000px;
+    }
+
+    .shoes {
+      height: 751px;
+
+      .title__shoes {
+        width: 1000px;
+        font-size: 118px;
+        top: 80px;
+      }
+
+      .container {
+        .container__product {
+          width: 1000px;
+          top: 71px;
+
+          .product__title {
+            padding-left: 20px;
+          }
+        }
+
+        .slider {
+          top: 377px;
+
+          .slider__product {
+            .card__shoes {
+              width: 220px;
+              height: 160px;
+              border: 1px solid #FFF;
+
+              h4 {
+
+                top: 90px;
+              }
+
+              img {
+                position: absolute;
+                top: -24px;
+                left: 3px;
+                width: 209px;
+                height: 107.589px;
+              }
+            }
+
+            .container__btn {
+              width: 250px;
+              height: 135px;
+
+              .btn__next {
+
+                width: 73px;
+              }
+
+              .btn__prev {
+
+                width: 94px;
+                margin-left: 10px;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .best__sellers .container__photo {
+      padding-top: 70px;
+
+      img {
+        width: 310px;
+      }
+    }
+
+    .sport__time .shoes__container {
+      .card__shoes {
+        width: 300px;
+
+        .desk {
+          width: 100%;
+        }
+
+        .shoes__img {
+          top: 10px;
+          width: 270px;
+          height: 164.411px;
+        }
+
+        .title__shoes {
+          font-size: 20px;
+        }
+      }
+    }
+
+    .modern__shoes .container .block__shoes {
+      .title {
+        font-size: 44px;
+      }
+
+      .text {
+        font-size: 20px;
+      }
+    }
+
+    .favorite__nike .container {
+      .title {
+        margin-bottom: 40px;
+        font-size: 44px;
+
+      }
+    }
+
+    .card {
+      width: 260px;
+      height: 400px;
+
+      .circle {
+        width: 200px;
+        height: 200px;
+      }
+
+      .shoes__card {
+        top: 70px;
+      }
+    }
+
+    .logo__section .container {
+      img {
+        width: 8%;
+      }
+    }
+
+    .handiwork .text__handiwork {
+      padding-top: 50px;
+    }
+
+    .best__people {
+      .container__flex {
+        .block__text {
+          .title {
+            color: #FFF;
+            font-family: Futura Md BT;
+            font-size: 44px;
+          }
+
+          .text {
+            color: #FFF;
+            font-family: Futura Bk BT;
+            font-size: 20px;
+          }
+        }
+
+        .block__img {
+          .blur {
+            width: 510.548px;
+            height: 516.348px;
+          }
+
+          .img1 {
+
+            width: 40%;
+          }
+
+          .img2 {
+            width: 54%;
+          }
+
+          .img3 {
+            width: 50%;
+          }
+        }
+      }
+    }
+
+    .section__visionaries {
+      .container {
+        img {
+          width: 35%;
+        }
+
+        .block__visionaries {
+          .title {
+            font-size: 40px;
+            padding-bottom: 24px;
+          }
+
+          .container__text .text {
+            font-style: 14px;
+            padding-bottom: 24px;
+          }
+        }
+      }
+    }
+
+    .nike__club {
+      .banner {
+        position: absolute;
+        top: 110px;
+        width: 1000px;
+
+        .block__text {
+          padding: 0px 0px 0px 40px;
+
+          .title {
+            color: #FFF;
+            font-family: Futura Md BT;
+            font-size: 40px;
+          }
+
+          .text {
+            color: #FFF;
+            font-family: Futura Bk BT;
+            font-size: 20px;
+          }
+        }
+      }
+
+      .shoes {
+        position: absolute;
+        right: 0;
+        width: 431px;
+        height: 318px;
+        top: 170px;
+      }
+    }
+
+    .footer .top__footer {
+      padding-bottom: 40px;
+
+      .footer__email {
+        .logo__nike {
+          padding-top: 40px;
+        }
+
+        .title {
+          color: #FFF;
+          font-family: Futura LT;
+          font-size: 40px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: 44px;
+        }
+      }
+
+      .footer__navigation {
+        .nav {
+          padding-bottom: 30px;
+
+          h5 {
+            font-size: 20px;
+            padding-bottom: 20px;
+          }
+
+          ul li {
+            padding-bottom: 16px;
+            color: #FFF;
+            font-family: Futura LtCn BT;
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1150px) {
+  .container {
+    width: 800px;
+    margin: 0 auto;
+  }
+
+  .App {
+    .section {
+      padding-top: 80px;
+    }
+
+    .header .container {
+      width: 800px;
+    }
+
+    .header .container .header__navigation .menu__navigation {
+      display: none;
+    }
+
+    .shoes {
+      height: 681px;
+
+      .title__shoes {
+        width: 800px;
+        font-size: 118px;
+        top: 80px;
+      }
+
+      .container {
+        .container__product {
+          width: 800px;
+          top: 71px;
+
+          .product__title {
+            padding-left: 20px;
+          }
+        }
+
+        .slider {
+          top: 377px;
+
+          .slider__product {
+            .card__shoes {
+              width: 250px;
+              height: 160px;
+              border: 1px solid #FFF;
+
+              h4 {
+
+                top: 90px;
+              }
+
+              img {
+                position: absolute;
+                top: -24px;
+                left: 3px;
+                width: 209px;
+                height: 107.589px;
+              }
+            }
+
+            .container__btn {
+              width: 260px;
+              height: 135px;
+
+              .btn__next {
+                span {
+                  margin-right: 0px;
+                }
+
+                width: 73px;
+              }
+
+              .btn__prev {
+
+                width: 94px;
+                margin-left: 10px;
+              }
+            }
+          }
+        }
+
+      }
+
+      .container__bottom {
+        height: 108px;
+
+        .flex__flask span {
+          color: #FFF;
+          font-family: Futura XBlkCnIt BT;
+          font-size: 22px;
+        }
+      }
+    }
+
+    .handiwork {
+      .title__handiwork {
+        width: 611px;
+        line-height: 80px;
+        font-size: 40px;
+      }
+
+      .text__handiwork {
+        line-height: 40px;
+      }
+    }
+
+    .best__sellers {
+      font-size: 44px;
+
+      .container__photo {
+        padding-top: 70px;
+
+        img {
+          width: 250px;
+        }
+      }
+    }
+
+    .sport__time {
+      .title {
+        font-size: 66px;
+        padding-bottom: 40px;
+      }
+
+      .shoes__container {
+        gap: 30px;
+
+        .card__shoes {
+          width: 230px;
+          height: 184px;
+
+          .desk {
+            width: 100%;
+          }
+
+          .shoes__img {
+            top: 0px;
+            width: 210px;
+            height: 134.411px;
+          }
+
+          .title__shoes {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+
+    .modern__shoes .container .block__shoes {
+      .title {
+        font-size: 44px;
+      }
+
+      .text {
+        font-size: 20px;
+      }
+    }
+
+    .favorite__nike .container {
+      .title {
+        margin-bottom: 40px;
+        font-size: 44px;
+
+      }
+    }
+
+    .card {
+      width: 230px;
+      height: 340px;
+
+      .circle {
+        width: 120px;
+        height: 150px;
+      }
+
+      img {
+        width: 90%;
+        z-index: 0;
+      }
+
+      .shoes__card {
+        top: 70px;
+        z-index: 100;
+
+        .title__card {
+          font-size: 16px;
+        }
+      }
+    }
+
+    .logo__section .container {
+      img {
+        width: 8%;
+      }
+    }
+
+    .handiwork .text__handiwork {
+      padding-top: 50px;
+    }
+
+    .best__people {
+      .container__flex {
+        .block__text {
+          .title {
+            color: #FFF;
+            font-family: Futura Md BT;
+            font-size: 44px;
+          }
+
+          .text {
+            color: #FFF;
+            font-family: Futura Bk BT;
+            font-size: 20px;
+          }
+        }
+
+        .block__img {
+          width: 380px;
+          height: 320px;
+          position: relative;
+
+          .blur {
+            width: 410.548px;
+            height: 316.348px;
+          }
+
+          .img1 {
+            left: 30px;
+            width: 40%;
+          }
+
+          .img2 {
+            width: 40%;
+          }
+
+          .img3 {
+            right: 0px;
+            width: 40%;
+          }
+        }
+      }
+    }
+
+    .section__visionaries {
+      .container {
+        img {
+          width: 35%;
+        }
+
+        .block__visionaries {
+          width: 490px;
+
+          .title {
+            font-size: 30px;
+            padding-bottom: 24px;
+          }
+
+          .container__text {
+            width: 490px;
+
+            .text {
+              font-size: 14px;
+              padding-bottom: 24px;
+            }
+          }
+        }
+      }
+    }
+
+    .nike__club {
+      height: 407px;
+
+      .banner {
+        position: absolute;
+        top: 110px;
+        width: 800px;
+        height: 230px;
+
+        .block__text {
+          padding: 0px 0px 0px 40px;
+
+          .title {
+            color: #FFF;
+            font-family: Futura Md BT;
+            font-size: 26px;
+          }
+
+          .text {
+            color: #FFF;
+            font-family: Futura Bk BT;
+            font-size: 16px;
+          }
+        }
+      }
+
+      .shoes {
+        position: absolute;
+        right: 0;
+        width: 411px;
+        height: 268px;
+        top: 140px;
+      }
+    }
+
+    .footer {
+      padding-top: 80px;
+
+      .top__footer {
+        padding-bottom: 20px;
+        align-items: start;
+
+        .footer__email {
+          padding-right: 30px;
+
+          .logo__nike {
+            padding-top: 40px;
+            width: 70%;
+          }
+
+
+          .title {
+            color: #FFF;
+            font-family: Futura LT;
+            font-size: 28px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 44px;
+          }
+
+          .form {
+            width: 280px;
+
+            .email__form {
+              width: 100%;
+              padding-left: 30px;
+              height: 44px;
+            }
+
+            .btn__form {
+              padding: 10px 20px;
+            }
+          }
+        }
+
+        .footer__navigation {
+          .nav {
+            padding-bottom: 20px;
+
+            h5 {
+              font-size: 16px;
+              padding-bottom: 20px;
+            }
+
+            ul li {
+              padding-bottom: 14px;
+              font-size: 12px;
+            }
+          }
+
+          .block__navigation {
+            padding-right: 20px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 928px) {
+  .container {
+    width: 740px;
+    margin: 0 auto;
+  }
+
+  .App {
+    .header .container {
+      width: 740px;
+    }
+
+    .shoes {
+      .title__shoes {
+        width: 740px;
+        font-size: 118px;
+      }
+
+      .container__bottom {
+        height: 118px;
+      }
+
+      .container {
+        .container__product {
+          width: 740px;
+          top: 41px;
+
+          .product__title {
+            padding-left: 20px;
+          }
+
+          img {
+            width: 100%;
+          }
+        }
+
+        .slider {
+          top: 365px;
+
+          .slider__product {
+            .card__shoes {
+              width: 230px;
+            }
+
+            .container__btn {
+              width: 240px;
+            }
+          }
+        }
+      }
+    }
+
+    .sport__time .shoes__container {
+      .card__shoes {
+        width: 360px;
+
+        .desk {
+          width: 360px;
+        }
+      }
+    }
+
+    .handiwork .text__handiwork {
+      font-size: 15px;
+      line-height: 32px;
+    }
+
+    .best__sellers .container__photo {
+      img {
+        width: 230px;
+      }
+    }
+
+    .sport__time {
+      .title {
+        font-size: 44px;
+        padding-bottom: 30px;
+      }
+
+      .shoes__container {
+        gap: 20px;
+
+        .card__shoes {
+          width: 230px;
+          height: 184px;
+
+          .desk {
+            width: 100%;
+          }
+
+          .shoes__img {
+            top: 0px;
+            width: 200px;
+            height: 129.411px;
+          }
+
+          .title__shoes {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+
+    .modern__shoes .container .img__block {
+      margin-right: 130px;
+      position: relative;
+      width: 407px;
+      height: 307px;
+
+      .block {
+        width: 257px;
+        height: 257px;
+      }
+
+      .block2 {
+        width: 200px;
+        height: 200px;
+      }
+
+      img {
+        width: 341px;
+        height: 211px;
+      }
+    }
+
+    .section__visionaries .container .block__visionaries {
+      width: 450px;
+
+      .container__text {
+        width: 440px;
+      }
+    }
+
+    .nike__club {
+      .banner {
+        width: 740px;
+        height: 230px;
+      }
+
+      .shoes {
+        display: none;
+      }
+    }
+
+    .warranty .warranty__container {
+      .card__warranty .block__text {
+        h5 {
+          font-size: 14px;
+        }
+
+        span {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    width: 540px;
+    margin: 0 auto;
+  }
+
+  .App {
+    .section {
+      padding-top: 60px;
+    }
+
+    .header .container {
+      width: 540px;
+
+      .header__navigation .menu__user {
+        width: 120px;
+      }
+    }
+
+    .shoes {
+      height: 741px;
+
+      .title__shoes {
+        width: 520px;
+        font-size: 98px;
+      }
+
+      .container {
+        .container__product {
+          width: 540px;
+          height: 460px;
+          top: 41px;
+          align-items: start;
+          flex-direction: column-reverse;
+
+          .product__title {
+            padding-left: 20px;
+
+            information__product {
+              padding: 20px 0px;
+            }
+
+            .title {
+              font-size: 36px;
+            }
+          }
+
+          img {
+            width: 70%;
+          }
+        }
+
+        .slider {
+          top: 415px;
+
+          .slider__product {
+
+            .card__shoes {
+              width: 255px;
+
+              h4 {
+                font-size: 18px;
+                height: 37px;
+              }
+            }
+
+            .container__btn {
+              display: none;
+            }
+          }
+        }
+      }
+
+      .container__bottom {}
+    }
+
+    .sport__time .shoes__container {
+      .card__shoes {
+        width: 360px;
+
+        .desk {
+          width: 360px;
+        }
+      }
+    }
+
+    .handiwork {
+      .text__handiwork {
+        font-size: 14px;
+        line-height: 28px;
+        padding-top: 30px;
+      }
+
+      .title__handiwork {
+        width: 431px;
+        line-height: 50px;
+        font-size: 28px;
+
+        img {
+          width: 45px;
+        }
+      }
+    }
+
+    .best__sellers {
+      .title {
+        font-size: 34px;
+        line-height: 44px;
+      }
+
+      .container__photo {
+        padding-top: 40px;
+
+        img {
+          width: 170px;
+        }
+      }
+    }
+
+    .sport__time {
+      .title {
+        font-size: 44px;
+        padding-bottom: 30px;
+      }
+
+      .shoes__container {
+        display: none;
+      }
+
+      .shoes__container-mobile {
+        padding-bottom: 40px;
+        gap: 20px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
+        .card__shoes {
+          width: 230px;
+          height: 184px;
+
+          .desk {
+            width: 100%;
+          }
+
+          .shoes__img {
+            top: 0px;
+            width: 200px;
+            height: 129.411px;
+          }
+
+          .title__shoes {
+            font-size: 16px;
+          }
+        }
+
+        .card__shoes:nth-child(-n+6) {
+          display: block;
+          opacity: 1;
+        }
+
+        .card__shoes {
+          display: none;
+        }
+
+        .card__shoes:nth-child(3) {
+          opacity: 1;
+        }
+
+        .card__shoes:nth-child(4) {
+          opacity: 1;
+        }
+
+        .card__shoes:nth-child(9) {
+          opacity: 0;
+        }
+
+        .card__shoes {
+          display: none;
+        }
+      }
+
+      .shoes__container-mobile.active {
+        .card__shoes:nth-child(9) {
+          opacity: 1;
+        }
+
+        .card__shoes {
+          display: block;
+        }
+      }
+    }
+
+    .modern__shoes {
+      .container {
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: end;
+
+        .img__block {
+          margin-right: 0px;
+          position: relative;
+          width: 407px;
+          height: 280px;
+
+          .block {
+            width: 257px;
+            height: 257px;
+          }
+
+          .block2 {
+            width: 200px;
+            height: 200px;
+            top: 30px;
+            left: 50px;
+          }
+
+          img {
+            width: 401px;
+            height: 261px;
+          }
+        }
+
+        .block__shoes {
+          .title {
+            font-size: 34px;
+          }
+
+          .text {
+            font-size: 16px;
+            padding: 10px 0px 30px 0px;
+          }
+        }
+      }
+
+      .section__visionaries .container .block__visionaries {
+        width: 450px;
+
+        .container__text {
+          width: 440px;
+        }
+      }
+    }
+
+    .nike__club {
+      .banner {
+        width: 740px;
+        height: 230px;
+      }
+
+      .shoes {
+        display: none;
+      }
+    }
+
+    .favorite__nike .container .title {
+      margin-bottom: 20px;
+      font-size: 34px;
+    }
+
+    .logo__section .container {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+
+      img {
+        width: 60%;
+      }
+    }
+
+    .best__people .container__flex {
+      flex-direction: column;
+
+      .block__img {
+        .img1 {
+          left: 10px;
+          width: 45%;
+        }
+
+        .img2 {
+          width: 45%;
+        }
+
+        .img3 {
+          right: 0px;
+          width: 45%;
+          bottom: -20px;
+        }
+      }
+
+      .block__text {
+        padding-bottom: 50px;
+
+        .text {
+
+          font-size: 16px;
+        }
+      }
+    }
+
+    .section__visionaries .container {
+      flex-direction: column-reverse;
+      align-items: flex-end;
+
+      img {
+        width: 70%;
+      }
+
+      .block__visionaries {
+        width: 100%;
+      }
+    }
+
+    .nike__club {
+      height: 330px;
+
+      .banner {
+        width: 540px;
+        height: 220px;
+
+        .logo {
+          margin-right: 20px;
+          width: 50%;
+        }
+
+        .block__text {
+          padding: 0px 0px 0px 20px;
+
+          .title {
+            font-size: 20px;
+          }
+
+          .text {
+            font-size: 14px;
+            padding: 10px 0px 20px 0px;
+          }
+        }
+      }
+    }
+
+    .warranty .warranty__container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+
+      .card__warranty {
+        padding-left: 40px;
+      }
+    }
+
+    .footer {
+      .top__footer {
+        align-items: start;
+        flex-direction: column-reverse;
+        padding-bottom: 0px;
+
+        .footer__email {
+          width: 100%;
+          height: 130px;
+
+          .logo__nike {
+            display: none;
+          }
+
+          .title {
+            line-height: 24px;
+            font-size: 24px;
+          }
+
+          .form {
+            .email__form {
+              width: 240px;
+              padding-left: 20px;
+
+            }
+
+            .btn__form {
+              color: #000000;
+            }
+          }
+        }
+
+        .footer__navigation .nav {
+          h5 {
+            font-size: 20px;
+            padding-bottom: 20px;
+          }
+
+          ul li {
+            padding-bottom: 14px;
+            font-size: 15px;
+          }
+        }
+      }
+
+      .bottom__footer {
+        padding: 0px 0px 20px;
+
+        .svg__flex {
+          width: 140px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 568px) {
+  .container {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .App {
+    .section {
+      padding-top: 40px;
+    }
+
+    .menu .menu__site .menu__email {
+      .logo__nike {
+        width: 60%;
+      }
+      .form {
+        width: 320px;
+        .email__form {
+          width: 320px;
+          height: 44px;
+          padding-left: 30px;
+        }
+        .btn__form {
+          height: 44px;
+          padding: 16px 20px;
+          line-height: 16px;
+        }
+      }
+      .title__menu {
+        font-size: 30px;
+      }
+    }
+
+    .header .container {
+      width: 90%;
+
+      .header__navigation {
+        .menu__user {
+          width: 120px;
+        }
+        .logo {
+          position: absolute;
+          left: 0;
+          right: 0;
+          margin: auto;
+          width: 15%;
+        }
+      }
+
+    }
+
+    .shoes {
+      height: 631px;
+
+      .title__shoes {
+        width: 100%;
+        font-size: 58px;
+        line-height: 68px;
+        top: 60px;
+      }
+
+      .container {
+        .container__product {
+          width: 320px;
+          height: 460px;
+          top: 41px;
+          align-items: start;
+          flex-direction: column-reverse;
+          padding-bottom: 30px;
+
+          .product__title {
+            padding-left: 0px;
+
+            .title {
+              width: 320px;
+              font-size: (calc(30px + 22 * ((100vw - 360px) / 568)));
+              line-height: 38px;
+            }
+          }
+
+          img {
+            width: 100%;
+          }
+        }
+
+        .slider {
+          top: 415px;
+          .slider__product {
+
+            .card__shoes {
+              width: 90%;
+              height: auto;
+              position: static;
+              border: 0px solid #FFF;
+
+              h4 {
+                font-size: 16px;
+                height: 57px;
+                position: static;
+                padding: 5px 10px 5px 10px;
+              }
+
+              img {
+                position: static;
+                padding: 5px 10px 5px 10px;
+
+                max-width: 90%;
+                margin: 0 auto;
+                height: auto;
+              }
+            }
+
+            .container__btn {
+              display: none;
+            }
+          }
+        }
+      }
+
+      .container__bottom {
+        display: none;
+      }
+    }
+
+    .sport__time .shoes__container {
+      .card__shoes {
+        width: 360px;
+
+        .desk {
+          width: 360px;
+        }
+      }
+    }
+
+    .handiwork {
+      .text__handiwork {
+        font-size: 14px;
+        line-height: 28px;
+        padding-top: 20px;
+      }
+
+      .title__handiwork {
+        width: 320px;
+        line-height: 50px;
+        font-size: 26px;
+
+        img {
+          width: 45px;
+        }
+      }
+    }
+
+    .best__sellers {
+
+      .title {
+        font-size: 34px;
+        line-height: 44px;
+      }
+
+      .container__photo {
+        padding-top: 40px;
+        overflow-y: scroll;
+
+        img {
+          width: 200px;
+        }
+
+        img:nth-child(2) {
+          margin: 0px 20px;
+        }
+      }
+    }
+
+    .sport__time {
+      .title {
+        font-size: 34px;
+        padding-bottom: 30px;
+      }
+
+      .shoes__container {
+        display: none;
+      }
+
+      .shoes__container-mobile {
+        padding-bottom: 40px;
+        gap: 10px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
+        .card__shoes {
+          width: 96%;
+
+          .desk {
+            width: 100%;
+          }
+
+          .shoes__img {
+            top: none;
+            bottom: 50px;
+            width: 96%;
+            height: auto;
+          }
+
+          .title__shoes {
+            font-size: 16px;
+          }
+        }
+
+        .card__shoes:nth-child(-n+6) {
+          display: block;
+          opacity: 1;
+        }
+
+        .card__shoes {
+          display: none;
+        }
+
+        .card__shoes:nth-child(3) {
+          opacity: 1;
+        }
+
+        .card__shoes:nth-child(4) {
+          opacity: 1;
+        }
+
+        .card__shoes:nth-child(9) {
+          opacity: 0;
+        }
+
+        .card__shoes {
+          display: none;
+        }
+      }
+
+      .shoes__container-mobile.active {
+        .card__shoes:nth-child(9) {
+          opacity: 1;
+        }
+
+        .card__shoes {
+          display: block;
+        }
+      }
+    }
+
+    .modern__shoes {
+      .container {
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: end;
+
+        .img__block {
+          margin-right: 0px;
+          position: relative;
+          width: 100%;
+          height: 230px;
+
+          .block {
+            width: 180px;
+            height: 180px;
+            top: 30px;
+            left: 30px;
+          }
+
+          .block2 {
+            width: 150px;
+            height: 150px;
+            top: 50px;
+            left: 80px;
+          }
+
+          img {
+            top: 20px;
+            left: -20px;
+            width: 360px;
+            height: 241px;
+          }
+        }
+
+        .block__shoes {
+          .title {
+            font-size: 34px;
+          }
+
+          .text {
+            font-size: 16px;
+            padding: 10px 0px 30px 0px;
+          }
+        }
+      }
+
+      .section__visionaries .container .block__visionaries {
+        width: 450px;
+
+        .container__text {
+          width: 440px;
+        }
+      }
+    }
+
+    .nike__club {
+      .banner {
+        width: 100%;
+        height: 230px;
+      }
+
+      .shoes {
+        display: none;
+      }
+    }
+
+    .favorite__nike {
+      .container .title {
+        margin-bottom: 20px;
+        font-size: 34px;
+      }
+
+      .card {
+        width: 95%;
+        height: 300px;
+
+        .circle {
+          width: 130px;
+          height: 110px;
+
+        }
+      }
+
+    }
+
+    .logo__section .container {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+
+      img {
+        width: 60%;
+      }
+    }
+
+    .best__people .container__flex {
+      flex-direction: column;
+
+      .block__img {
+        width: 320px;
+
+        .img1 {
+          left: 10px;
+          width: 45%;
+        }
+
+        .img2 {
+          width: 45%;
+        }
+
+        .img3 {
+          right: 0px;
+          width: 45%;
+          bottom: 40px;
+        }
+
+        .blur {
+          width: 290.548px;
+          height: 196.348px;
+        }
+      }
+
+      .block__text {
+        padding-bottom: 30px;
+
+        .title {
+          font-size: 34px;
+        }
+
+        .text {
+          padding: 10px 0px 20px 0px;
+          font-size: 14px;
+        }
+      }
+    }
+
+    .section__visionaries .container {
+      flex-direction: column-reverse;
+      align-items: flex-end;
+
+      img {
+        width: 70%;
+      }
+
+      .block__visionaries {
+        width: 100%;
+        .container__text {
+          width: 100%;
+          .text {
+            font-size: 14px;
+            padding-bottom: 18px;
+          }
+        }
+      }
+    }
+
+    .nike__club {
+      height: 240px;
+
+      .banner {
+        width: 90%;
+        height: 180px;
+        top: 40px;
+
+        .logo {
+          display: none;
+        }
+
+      }
+    }
+
+    .warranty .warranty__container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+
+      .card__warranty {
+        padding-left: 0px;
+      }
+    }
+
+    .footer {
+      padding-top: 60px;
+
+      .top__footer {
+        font-size: 16px;
+
+        .footer__email {
+          width: 100%;
+          height: 130px;
+
+          .logo__nike {
+            display: none;
+          }
+
+          .title {
+            line-height: 24px;
+            font-size: 24px;
+          }
+
+          .form {
+            .email__form {
+              width: 240px;
+              padding-left: 20px;
+
+            }
+
+            .btn__form {
+              color: #000000;
+            }
+          }
+        }
+
+        .footer__navigation {
+          .nav {
+            h5 {
+              font-size: 14px;
+              padding-bottom: 20px;
+            }
+
+            ul li {
+              padding-bottom: 10px;
+              font-size: 12px;
+            }
+          }
+          .navigation_max {
+            ul li {
+              padding-bottom: 14px;
+
+            }
+          }
+        }
+      }
+
+      .bottom__footer {
+        padding: 0px 0px 20px;
+
+        .svg__flex {
+          width: 140px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
+      }
+    }
+  }
+}

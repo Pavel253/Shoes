@@ -1,6 +1,15 @@
 body {
   background: #000; 
 }
+
+.section {
+  padding-top: 180px;
+}
+
+.section:nth-child(1),  .section:nth-child(2) {
+  padding-top: 0px;
+}
+
 .container {
   width: 1360px;
   margin: 0 auto;
