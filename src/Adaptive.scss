@@ -69,12 +69,30 @@
       padding-top: 140px;
     }
   }
+
 }
 
 @media screen and (max-width: 1350px) {
   .container {
     width: 1000px;
     margin: 0 auto;
+  }
+
+  .menu .menu__site {
+    .menu__email {
+      .form {
+        width: 350px;
+
+        .email__form {
+          padding-left: 40px;
+        }
+      }
+    }
+
+    .menu__history {
+      width: 600px;
+      height: 200px;
+    }
   }
 
   .App {
@@ -88,7 +106,9 @@
 
     .shoes {
       height: 751px;
-
+      .svg {
+        display: none;
+      }
       .title__shoes {
         width: 1000px;
         font-size: 118px;
@@ -348,6 +368,34 @@
 }
 
 @media screen and (max-width: 1150px) {
+
+  .menu .menu__site {
+    .menu__email {
+      .title__menu {
+        font-size: 30px;
+      }
+
+      .form {
+        width: 320px;
+
+        .email__form {
+          width: 320px;
+          padding-left: 40px;
+        }
+      }
+    }
+
+    .menu__history {
+      width: 450px;
+      height: 160px;
+
+      .span__history {
+        font-size: 15px;
+        line-height: 18px;
+      }
+    }
+  }
+
   .container {
     width: 800px;
     margin: 0 auto;
@@ -722,6 +770,36 @@
     margin: 0 auto;
   }
 
+  .menu .menu__site {
+    .menu__email {
+      .title__menu {
+        font-size: 30px;
+      }
+
+      .form {
+        width: 270px;
+
+        .email__form {
+          width: 270px;
+          padding-left: 30px;
+        }
+        .btn__form {
+          padding: 16px 30px;
+        }
+      }
+    }
+
+    .menu__history {
+      width: 450px;
+      height: 160px;
+
+      .span__history {
+        font-size: 15px;
+        line-height: 18px;
+      }
+    }
+  }
+
   .App {
     .header .container {
       width: 740px;
@@ -877,6 +955,46 @@
   .container {
     width: 540px;
     margin: 0 auto;
+  }
+
+  .menu .menu__site {
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .menu__email {
+      padding-bottom: 20px;
+      .title__menu {
+        font-size: 24px;
+        line-height: 24px;
+      }
+
+      .form {
+        width: 270px;
+
+        .email__form {
+          width: 270px;
+          padding-left: 30px;
+          height: 40px;
+        }
+        .btn__form {
+          padding: 8px 30px;
+          height: 40px;
+        }
+      }
+    }
+
+    .menu__history {
+      width: 450px;
+      height: 160px;
+
+      .span__history {
+        font-size: 15px;
+        line-height: 18px;
+      }
+    }
   }
 
   .App {
@@ -1285,6 +1403,24 @@
     margin: 0 auto;
   }
 
+.menu .menu__site {
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .menu__history {
+      width: 100%;
+      height: 160px;
+
+      .span__history {
+        font-size: 14px;
+        line-height: 16px;
+      }
+    }
+  }
+
   .App {
     .section {
       padding-top: 40px;
@@ -1294,19 +1430,23 @@
       .logo__nike {
         width: 60%;
       }
+
       .form {
         width: 320px;
+
         .email__form {
           width: 320px;
           height: 44px;
           padding-left: 30px;
         }
+
         .btn__form {
           height: 44px;
           padding: 16px 20px;
           line-height: 16px;
         }
       }
+
       .title__menu {
         font-size: 30px;
       }
@@ -1319,6 +1459,7 @@
         .menu__user {
           width: 120px;
         }
+
         .logo {
           position: absolute;
           left: 0;
@@ -1366,6 +1507,7 @@
 
         .slider {
           top: 415px;
+
           .slider__product {
 
             .card__shoes {
@@ -1669,8 +1811,10 @@
 
       .block__visionaries {
         width: 100%;
+
         .container__text {
           width: 100%;
+
           .text {
             font-size: 14px;
             padding-bottom: 18px;
@@ -1748,6 +1892,7 @@
               font-size: 12px;
             }
           }
+
           .navigation_max {
             ul li {
               padding-bottom: 14px;

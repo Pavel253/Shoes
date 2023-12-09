@@ -10,15 +10,26 @@ import "swiper/css/scrollbar";
 import { Navigation } from "swiper/modules";
 
 import Btn from "../../Button/Btn";
+import { useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { setCurrentShoes } from "../../../redux/shoes/reducer";
 
 const Shoes = ({ shoesData }) => {
   const [data, setData] = useState('');
+
+  const dispatch = useDispatch();
+  const history = useNavigate();
+
+
+  const handleClickPages = () => {
+    dispatch(setCurrentShoes(data));
+    history(`/${data.title}`);
+  };
 
   return (
     <section className="shoes section">
       <svg
         className="svg"
-        height="707"
         viewBox="0 0 2106 707"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
@@ -75,7 +86,7 @@ const Shoes = ({ shoesData }) => {
                 </svg>
               </div>
             </div>
-            <Btn items="More Details" />
+            <Btn click={handleClickPages} items="More Details" />
           </div>
         </div>
         <div className="slider">
@@ -178,7 +189,7 @@ const Card = ({shoes, data, setData}) => {
 
   useEffect(() => {
     shoesData()
-  }, [])
+  })
 
   return (
     <div className="card__shoes" onClick={() => shoesData()}>

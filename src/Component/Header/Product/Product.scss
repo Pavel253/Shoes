@@ -1,0 +1,48 @@
+.product__shoes {
+  padding: 10px;
+  width: 100%;
+  height: 90px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .img {
+    width: 140px;
+    height: 80px;
+    border-radius: 0;
+    cursor: pointer;
+  }
+  .menu__btn {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    .title {
+      font-size: 16px;
+    }
+    .price {
+      padding-top: 10px;
+      font-size: 14px;
+    }
+  }
+  .button {
+    background-color: transparent;
+    width: 24px;
+    height: 24px;
+    position: relative;
+    .line {
+      width: 20px;
+      height: 2px;
+      background-color: #000;
+      position: absolute;
+    }
+    .line:nth-child(1) {
+      top: 10px;
+      left: 0;
+      transform: rotate(135deg);
+    }
+    .line:nth-child(2) {
+      top: 10px;
+      left: 0;
+      transform: rotate(45deg);
+    }
+  }
+}

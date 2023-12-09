@@ -1,9 +1,9 @@
 import React from "react";
 import './Btn.scss';
 
-const Btn = ({items}) => {
+const Btn = ({click, items}) => {
   return (
-    <button className="btn">
+    <button onClick={click} className="btn">
       <span>{items}</span>
       <svg
         width="24"

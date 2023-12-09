@@ -1,0 +1,324 @@
+.container {
+  .container__header {
+    margin-top: 60px;
+
+    .btn {
+      display: inline;
+
+      button {
+        background-color: transparent;
+        color: aliceblue;
+        font-size: 18px;
+        padding: 10px 30px;
+      }
+    }
+  }
+
+  .container__shoes {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: row;
+    padding-top: 120px;
+
+    .shoes__buy {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+      gap: 30px;
+      width: 80%;
+      padding-left: 20px;
+    }
+
+    .aside__container {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      width: 20%;
+      height: 100%;
+
+      .categories {
+        width: 100%;
+        margin-bottom: 40px;
+
+        .title__h5 {
+          color: #FFF;
+          font-family: Futura Bk BT;
+          font-size: 24px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 20px;
+        }
+
+        .input__categories {
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          margin: 19px 0px;
+
+          .input__checkbox {
+            width: 20px;
+            height: 20px;
+            position: relative;
+
+            .checkbox {
+              width: 20px;
+              height: 20px;
+              position: absolute;
+              top: 0;
+              left: 0;
+            }
+          }
+
+          .span__categories {
+            color: #FFF;
+            font-family: Futura Bk BT;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 16px;
+            padding-left: 20px;
+          }
+        }
+      }
+
+      .categories__size {
+        height: 220px;
+
+        .title__h5 {
+          padding-bottom: 5px;
+        }
+
+        .size__label {
+          padding-top: 30px;
+
+          // .input__search {
+          //   border: 1px solid #fff;
+          //   height: 34px;
+          //   border-radius: 50px;
+          //   position: relative;
+          //   width: 80%;
+
+          //   .input {
+          //     height: 34px;
+          //     background-color: transparent;
+          //     color: #FFF;
+          //     padding-left: 1px;
+          //     color: #FFF;
+          //     font-family: Futura Bk BT;
+          //     font-size: 16px;
+          //     font-style: normal;
+          //     font-weight: 400;
+          //     line-height: 20px;
+          //   }
+
+          //   .btn {
+          //     height: 32px;
+          //     position: absolute;
+          //     top: 0;
+          //     right: 0;
+          //     font-size: 17px;
+          //     color: #333333;
+          //     font-weight: 700;
+
+          //     background-color: rgb(98, 233, 170);
+          //   }
+          // }
+        }
+
+        .input__categories {
+          padding-top: 5px;
+        }
+
+        .input__categories:nth-child(-n+5) {
+          display: flex;
+        }
+
+
+
+        .input__categories-start {
+          display: none;
+          animation-name: card__animate;
+          animation-duration: 1s;
+        }
+
+        .btn__size {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          background-color: transparent;
+          width: 76px;
+
+          .span {
+            color: #FFF;
+            font-family: Futura LtCn BT;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+          }
+
+          .svg {
+            transition: all 0.4s;
+            transform: rotate(180deg);
+          }
+        }
+
+        .btn__size.active {
+          transition: all 0.4s;
+
+          .svg {
+            transition: all 0.4s;
+            transform: rotate(0deg);
+          }
+        }
+
+      }
+
+      .categories__color {
+        padding-top: 40px;
+        .input__categories {
+          .span__categories {
+            padding-left: 10px;
+          }
+
+          .circle__color {
+            margin-left: 10px;
+            border-radius: 50px;
+            width: 24px;
+            height: 24px;
+          }
+        }
+
+        .input__categories:nth-child(2) {
+
+          .circle__color {
+            border: 1px solid white;
+            background-color: #000000;
+          }
+
+        }
+
+        .input__categories:nth-child(3) {
+
+          .circle__color {
+            background-color: #ffffff;
+          }
+
+        }
+
+        .input__categories:nth-child(4) {
+
+          .circle__color {
+            background-color: #ff3030;
+          }
+
+        }
+
+        .input__categories:nth-child(5) {
+
+          .circle__color {
+            background-color: #308aff;
+          }
+
+        }
+
+        .input__categories:nth-child(6) {
+
+          .circle__color {
+            background-color: #ffea30;
+          }
+
+        }
+
+        .input__categories:nth-child(7) {
+
+          .circle__color {
+            background-color: rgb(163, 61, 1);
+          }
+
+        }
+
+        .input__categories:nth-child(8) {
+
+          .circle__color {
+            background-color: #7cff30;
+          }
+
+        }
+
+        .input__categories:nth-child(9) {
+
+          .circle__color {
+            background-color: rgb(255, 137, 26);
+          }
+
+        }
+
+        .input__categories:nth-child(10) {
+
+          .circle__color {
+            background-color: #9b30ff;
+          }
+
+        }
+
+        .input__categories:nth-child(11) {
+
+          .circle__color {
+            background-color: #ff30ee;
+          }
+
+        }
+
+      }
+
+
+      .categories__size.active {
+        overflow-x: scroll;
+        height: 400px;
+        animation-name: categories__animate;
+        animation-duration: 1s;
+
+        .input__categories-start {
+          display: flex;
+        }
+      }
+    }
+  }
+}
+
+@keyframes categories__animate {
+  0% {
+    display: block;
+    height: 220px;
+  }
+
+  80% {
+    height: 400px;
+  }
+
+  100% {
+    display: block;
+    opacity: 1;
+  }
+}
+
+@keyframes card__animate {
+  0% {
+    display: block;
+    opacity: 1;
+
+    height: 0px;
+  }
+
+  80% {
+    height: 26px;
+    opacity: 1;
+  }
+
+  100% {
+    display: block;
+    opacity: 1;
+  }
+}

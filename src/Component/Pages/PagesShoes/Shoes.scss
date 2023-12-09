@@ -1,0 +1,251 @@
+.container {
+  width: 1300px;
+  margin: 0 auto;
+
+  .description__ss {
+    padding-top: 100px;
+    display: flex;
+    align-items: center;
+
+    .img__ss {
+      overflow: hidden;
+      border-radius: 50px;
+      width: 800px;
+      height: 600px;
+
+      img {
+        width: 800px;
+        height: 600px;
+      }
+
+      .swiper-pagination-fraction,
+      .swiper-pagination-custom,
+      .swiper-horizontal>.swiper-pagination-bullets,
+      .swiper-pagination-bullets.swiper-pagination-horizontal {
+        width: 180px;
+        padding: 5px 10px;
+        border-radius: 20px;
+        background-color: #0000009f;
+        left: 0;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .swiper-pagination-bullet-active {
+        opacity: var(--swiper-pagination-bullet-opacity, 1);
+        background: var(--swiper-pagination-color, #fff);
+      }
+    }
+
+    .title__ss {
+      display: flex;
+      align-items: flex-start;
+      flex-direction: column;
+      margin-left: 60px;
+
+      .title {
+        color: #FFF;
+        font-family: Futura Bk BT;
+        font-size: 46px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 46px;
+        padding-bottom: 60px;
+      }
+
+      .ss__price {
+        width: 100%;
+        padding: 35px 40px;
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+        background-color: #8b1df9;
+        border-radius: 20px;
+
+        .price {
+          color: #FFF;
+          font-family: Futura Bk BT;
+          font-size: 36px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 16px;
+        }
+
+        .ss__Installment {
+          padding-top: 20px;
+          font-size: 24px;
+        }
+      }
+
+      .ss__color {
+        padding-top: 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        .title__h5 {
+          color: #FFF;
+          font-family: Futura Bk BT;
+          font-size: 26px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: 26px;
+          padding-bottom: 20px;
+        }
+      }
+
+      .container__ss {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 10px;
+
+        .input__categories {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          flex-direction: column;
+          height: 120px;
+          width: 80px;
+          background-color: hsla(0, 0%, 100%, 0.705);
+          border-radius: 10px;
+
+          .circle__color {
+            margin-top: 10px;
+            width: 20px;
+            height: 20px;
+            border-radius: 50px;
+          }
+        }
+
+        .input__categories:nth-child(1) {
+
+          .circle__color {
+            background-color: #000000;
+          }
+
+        }
+
+        .input__categories:nth-child(2) {
+
+          .circle__color {
+            background-color: #ffffff;
+          }
+
+        }
+
+        .input__categories:nth-child(3) {
+
+          .circle__color {
+            background-color: #ff3030;
+          }
+
+        }
+
+        .input__categories:nth-child(4) {
+
+          .circle__color {
+            background-color: #308aff;
+          }
+
+        }
+      }
+
+      .ss__size {
+        width: 280px;
+        padding: 50px 0px 20px 0px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .span__title {
+          color: #FFF;
+          font-family: Futura Bk BT;
+          font-size: 24px;
+          font-style: normal;
+          font-weight: 600;
+        }
+      }
+
+      .btn {
+        background-color: #fff;
+        font-size: 24px;
+        padding: 10px 19px;
+      }
+    }
+  }
+
+  .info__ss {
+    padding-top: 80px;
+
+    .categories__material {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding: 40px 0px;
+
+      .material {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        .title {
+          color: #FFF;
+          font-family: Futura Bk BT;
+          font-size: 24px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: 32px;
+        }
+
+        .span {
+          padding-top: 15px;
+          color: #FFF;
+          font-family: Futura Bk BT;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 400;
+        }
+      }
+    }
+
+    .text {
+      margin-top: 70px;
+      border-radius: 50px;
+      padding: 30px;
+      background-color: #8b1df9;
+      color: #FFF;
+      font-family: Futura Bk BT;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 24px;
+    }
+  }
+
+  .recommendation {
+    padding-top: 120px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow-y: scroll;
+
+    .swiper-wrapper {
+      top: -30px;
+    }
+
+    .swiper-scrollbar {
+      background: var(--swiper-scrollbar-bg-color, rgba(255, 255, 255, 0.41));
+    }
+
+    .swiper-scrollbar-drag {
+      height: 200%;
+      width: 100%;
+      position: relative;
+      background: var(--swiper-scrollbar-drag-bg-color, rgb(1, 111, 255));
+      border-radius: var(--swiper-scrollbar-border-radius, 10px);
+      left: 0;
+      top: -2px;
+    }
+  }
+}

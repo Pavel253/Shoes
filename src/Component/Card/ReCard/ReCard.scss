@@ -1,0 +1,43 @@
+.re__card__shoes-buy {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  cursor: pointer;
+  border-radius: 50px;
+  background-color: rgba(173, 173, 173, 0.363);
+  .title__shoes {
+    position: absolute;
+    bottom: 80px;
+    width: 100%;
+    text-align: center;
+    color: #FFF;
+    font-family: Futura LtCn BT;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: capitalize;
+  }
+  .btn__link {
+    padding: 10px 30px 10px 30px;
+    .shoes__img {
+      width: 240px;
+    }
+  }
+  .flex__btn {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .btn {
+      margin: 0px 10px;
+      padding: 7px 27px;
+      background-color: #fff;
+      font-size: 16px;
+      color: black;
+    }
+  }
+  
+}

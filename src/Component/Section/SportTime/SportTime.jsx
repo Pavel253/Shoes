@@ -1,43 +1,74 @@
-import React, { useState } from 'react';
-import './SportTime.scss'
-import Card from '../../Card/SportTime/Card';
-import Modal from '../../Modal/Modal';
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
-const SportTime = ({shoesData, item, setItem}) => {
+import "./SportTime.scss";
 
-  const [active, setActive] = useState(false)
-  const [modalActive, setModalActive] = useState(false)
+import Card from "../../Card/SportTime/Card";
+
+const SportTime = ({ shoesData, setItem }) => {
+  const [active, setActive] = useState(false);
+  const [activeTwo, setActiveTwo] = useState(false);
 
   return (
-    <section className='sport__time section'>
+    <section className="sport__time section">
       <div className="container">
         <h2 className="title">Sports Time</h2>
-        <div className={active ? 'shoes__container active' : 'shoes__container'}>
+        <div
+          className={active ? "shoes__container active" : "shoes__container"}
+        >
           {shoesData.map((shoes, id) => {
             return (
-              <Card setItem={setItem} setActive={setModalActive} id={id} shoes={shoes} />
-            )
+              <Card
+                setItem={setItem}
+                id={id}
+                shoes={shoes}
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
+                to="shoes"
+              />
+            );
           })}
         </div>
-        <div className={active ? 'shoes__container-mobile active' : 'shoes__container-mobile'}>
+        <div
+          className={
+            active
+              ? "shoes__container-mobile active"
+              : "shoes__container-mobile"
+          }
+        >
           {shoesData.map((shoes, id) => {
-            return (
-              <Card setItem={setItem} setActive={setModalActive} id={id} shoes={shoes} />
-            )
+            return <Card setItem={setItem} id={id} shoes={shoes} />;
           })}
         </div>
-        <BtnSport active={active} setActive={setActive} items="Lets Discover More" />
+        <div className="btn__flex">
+          <BtnSport
+            active={active}
+            setActive={setActive}
+            items="Lets Discover More"
+          />
+          <Link className="btn__link" to="/shop-shoes">
+            <BtnSport
+              active={activeTwo}
+              setActive={setActiveTwo}
+              items="go to products"
+            />
+          </Link>
+        </div>
       </div>
-      <Modal setItem={setItem} item={item} active={modalActive} setActive={setModalActive} />
     </section>
   );
 };
 
 export default SportTime;
 
-const BtnSport = ({items, active, setActive}) => {
+const BtnSport = ({ items, active, setActive }) => {
   return (
-    <button className={active ? "btn active" : "btn"} onClick={() => setActive(!active)}>
+    <button
+      className={active ? "btn active" : "btn"}
+      onClick={() => setActive(!active)}
+    >
       <span>{items}</span>
       <svg
         width="24"
