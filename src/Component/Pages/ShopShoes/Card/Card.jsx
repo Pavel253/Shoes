@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
 import "./Card.scss";
@@ -16,7 +16,10 @@ const Card = ({ setItem, setActive, shoes, id }) => {
   const items = useSelector((state) => state.cart.itemsInCart);
   const isItemInCart = items.some((item) => item.id === shoes.id);
 
+  const [activeClick, setActiveClick] = useState(true)
+
   const handleClick = (e) => {
+    setActiveClick(!activeClick)
     e.stopPropagation();
     if (isItemInCart) {
       dispatch(deleteItemFromCart(shoes.id));
@@ -33,11 +36,11 @@ const Card = ({ setItem, setActive, shoes, id }) => {
 
   const handleClickPages = () => {
     dispatch(setCurrentShoes(shoes));
-    history(`${shoes.title}`);
+    history(`/${shoes.title}`);
   };
 
   return (
-    <div id={id} className="card__shoes-buy">
+    <div id={id} className='card__shoes-buy' >
       <button className="modal__img" onClick={clickItem}>
         <svg
           width="30px"
@@ -91,13 +94,14 @@ const Card = ({ setItem, setActive, shoes, id }) => {
           />
         </svg>
       </button>
+      <span className="price">{shoes.price}</span>
       <h2 className="title__shoes">{shoes.title}</h2>
       <div className="btn__link" onClick={handleClickPages}>
         <img className="shoes__img" src={shoes.image} alt="" />
       </div>
       <div className="flex__btn">
         <button className="btn">buy</button>
-        <button className="btn" onClick={handleClick}>
+        <button className={activeClick ? 'btn active' : 'btn'} onClick={handleClick}>
           {isItemInCart ? "Remove from cart" : "To cart"}
         </button>
       </div>

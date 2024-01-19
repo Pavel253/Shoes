@@ -9,20 +9,17 @@ import BurgerMenu from "../Menu/BurgerMenu";
 import Cart from "./Cart/Cart";
 import Search from "./Search/Search";
 
-const Header = ({ setIsOpen, isOpen, shoes, value, setValue, filteredCountries }) => {
-  const [active, setActive] = useState(false);
-  const [activeSearch, setActiveSearch] = useState(false);
+const Header = ({ value, setValue, setFilteredProducts, onChangeGender, searchValue, setSearchValue, onSearch, shoes, filteredProducts }) => {
+  const [active, setActive] = useState(false)
+  const [activeSearch, setActiveSearch] = useState('');
   const [activeCart, setActiveCart] = useState(false);
 
-
-  const itemClickHandler = (e) => {
-    setValue(e.target.textContent);
-    setIsOpen(!isOpen);
+  const handleSearchChange = (event) => {
+    setSearchValue(event.target.value);
+    onSearch(event.target.value)
+    setValue(event.target.value)
   };
 
-  const inputClickHandler = () => {
-    setIsOpen(true);
-  };
 
   return (
     <header className="header">
@@ -35,8 +32,8 @@ const Header = ({ setIsOpen, isOpen, shoes, value, setValue, filteredCountries }
         >
           <div className="navigation__container">
             <div
-              onClick={() => setActive(!active)}
-              className={active ? "menu__header active" : "menu__header"}
+
+              className="menu__header"
             >
               <span className="line"></span>
               <span className="line"></span>
@@ -44,16 +41,16 @@ const Header = ({ setIsOpen, isOpen, shoes, value, setValue, filteredCountries }
             </div>
             <ul className="menu__navigation">
               <li>
-                <a href="http://localhost-live:3000/">New Arrival</a>
+                <Link onClick={() => onChangeGender('News')} to="/shop-shoes">New Arrival</Link>
               </li>
               <li>
-                <a href="http://localhost-live:3000/">Men</a>
+                <Link onClick={() => onChangeGender('Male')} to="/shop-shoes">Men</Link>
               </li>
               <li>
-                <a href="http://localhost-live:3000/">Women</a>
+                <Link onClick={() => onChangeGender('Female')} to="/shop-shoes">Women</Link>
               </li>
               <li>
-                <a href="http://localhost-live:3000/">Kids</a>
+                <Link onClick={() => onChangeGender('Children')} to="/shop-shoes">Kids</Link>
               </li>
             </ul>
           </div>
@@ -63,17 +60,20 @@ const Header = ({ setIsOpen, isOpen, shoes, value, setValue, filteredCountries }
           </Link>
 
           <div className="menu__user">
-            <Search
+
+            <Search 
               value={value}
-              isOpen={isOpen}
-              setActiveSearch={setActiveSearch}
-              activeSearch={activeSearch}
-              itemClickHandler={itemClickHandler}
-              inputClickHandler={inputClickHandler}
-              setActive={setActive}
               setValue={setValue}
-              filteredCountries={filteredCountries}
+              setSearchValue={setSearchValue}
+              searchValue={searchValue} 
+              onSearch={onSearch} 
+              active={activeSearch} 
+              setActive={setActiveSearch}
+              handleSearchChange={handleSearchChange} 
+              filteredProducts={filteredProducts} 
+              setFilteredProducts={setFilteredProducts}
             />
+
 
             <svg
               width="24"

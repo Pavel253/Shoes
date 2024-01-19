@@ -43,7 +43,6 @@
 
         .title__h5 {
           color: #FFF;
-          font-family: Futura Bk BT;
           font-size: 24px;
           font-style: normal;
           font-weight: 400;
@@ -72,13 +71,58 @@
 
           .span__categories {
             color: #FFF;
-            font-family: Futura Bk BT;
             font-size: 16px;
             font-style: normal;
             font-weight: 400;
             line-height: 16px;
             padding-left: 20px;
           }
+        }
+      }
+
+      .categories__gender {
+        padding-top: 20px;
+        display: flex;  
+        flex-direction: column;
+        align-items: flex-start;
+        .btn__gender {
+          padding: 7px 0px;
+          background-color: transparent;
+          color: #FFF;
+          font-style: 500;
+          font-size: 17px;
+          border-bottom: 1px solid rgb(0, 0, 0);
+          transition: all 0.4s;
+        }
+        .btn__gender:hover {
+          border-bottom: 1px solid white;
+        }
+        .btn__gender.active {
+          border-bottom: 1px solid white;
+          font-size: 18px;
+        }
+      }
+
+      .categories__color {
+        padding-top: 20px;
+        display: flex;  
+        flex-direction: column;
+        align-items: flex-start;
+        .btn__gender {
+          padding: 7px 0px;
+          background-color: transparent;
+          color: #FFF;
+          font-style: 500;
+          font-size: 17px;
+          border-bottom: 1px solid rgb(0, 0, 0);
+          transition: all 0.4s;
+        }
+        .btn__gender:hover {
+          border-bottom: 1px solid white;
+        }
+        .btn__gender.active {
+          border-bottom: 1px solid white;
+          font-size: 18px;
         }
       }
 
@@ -91,39 +135,6 @@
 
         .size__label {
           padding-top: 30px;
-
-          // .input__search {
-          //   border: 1px solid #fff;
-          //   height: 34px;
-          //   border-radius: 50px;
-          //   position: relative;
-          //   width: 80%;
-
-          //   .input {
-          //     height: 34px;
-          //     background-color: transparent;
-          //     color: #FFF;
-          //     padding-left: 1px;
-          //     color: #FFF;
-          //     font-family: Futura Bk BT;
-          //     font-size: 16px;
-          //     font-style: normal;
-          //     font-weight: 400;
-          //     line-height: 20px;
-          //   }
-
-          //   .btn {
-          //     height: 32px;
-          //     position: absolute;
-          //     top: 0;
-          //     right: 0;
-          //     font-size: 17px;
-          //     color: #333333;
-          //     font-weight: 700;
-
-          //     background-color: rgb(98, 233, 170);
-          //   }
-          // }
         }
 
         .input__categories {
@@ -151,7 +162,6 @@
 
           .span {
             color: #FFF;
-            font-family: Futura LtCn BT;
             font-size: 24px;
             font-style: normal;
             font-weight: 400;
@@ -273,17 +283,6 @@
 
       }
 
-
-      .categories__size.active {
-        overflow-x: scroll;
-        height: 400px;
-        animation-name: categories__animate;
-        animation-duration: 1s;
-
-        .input__categories-start {
-          display: flex;
-        }
-      }
     }
   }
 }

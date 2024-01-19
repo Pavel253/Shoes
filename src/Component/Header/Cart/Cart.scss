@@ -30,7 +30,6 @@
       flex-direction: column-reverse;
       .main-list {
         color: #000000;
-        font-family: Futura LtCn BT;
         font-size: 20px;
         font-style: normal;
         font-weight: 400;
@@ -43,7 +42,6 @@
 
       .cart-menu__arrange {
         color: #000000;
-        font-family: Futura LtCn BT;
         font-size: 16px;
         font-style: normal;
         font-weight: 400;
@@ -54,7 +52,6 @@
         width: 100%;
         .cart-menu__total-price {
           color: #000000;
-          font-family: Futura LtCn BT;
           font-size: 20px;
           font-style: normal;
           font-weight: 400;
@@ -67,7 +64,6 @@
 
         .btn {
           color: #000000;
-          font-family: Futura LtCn BT;
           font-size: 16px;
           font-style: normal;
           font-weight: 700;
@@ -79,7 +75,6 @@
 
     }
 
-    .header__main {}
   }
 
   .btn__svg:hover~.cart__menu {
@@ -107,7 +102,6 @@
     top: -20px;
     right: -20px;
     color: #FFF;
-    font-family: Futura Bk BT;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;

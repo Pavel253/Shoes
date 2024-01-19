@@ -20,7 +20,6 @@ const AppShoes = ({ shoesData, item, setItem }) => {
     initial={{opacity:0}}
     animate={{opacity: 1}}
     exit={{ opacity: 0}}
-    // style={{backgroundImage: `url(${BannerImage})`}}
     >
       <main>
         <Shoes shoesData={shoesData} />

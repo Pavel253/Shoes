@@ -14,7 +14,7 @@ const Product = ({items}) => {
 
   const handleClickPages = () => {
     dispatch(setCurrentShoes(items)); 
-    history(`/shop-shoes/${items.id}`);
+    history(`/${items.title}`);
   };
 
   const handleClick = () => {

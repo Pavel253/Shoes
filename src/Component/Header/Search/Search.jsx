@@ -1,28 +1,32 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 const Search = ({
+  handleSearchChange,
+  filteredProducts,
   value,
-  isOpen,
-  inputClickHandler,
-  setActiveSearch,
-  activeSearch,
-  itemClickHandler,
-  setActive,
-  setValue,
-  filteredCountries
-  }) => {
+  setValue
+}) => {
+
+  const [isOpen, setIsOpen] = useState(true);
+
+  const itemClickHandler = (e) => {
+    setValue(e.target.textContent);
+    setIsOpen(!isOpen);
+  };
+
+  const inputClickHandler = () => {
+    setIsOpen(true);
+  };
+
   return (
     <form className="search">
-      <div
-        className={activeSearch ? "dots active" : "dots"}
-        onClick={() => setActiveSearch(!activeSearch)}
-      />
+
       <div className="form__search">
         <input
-          onClick={inputClickHandler}
           value={value}
-          onChange={(event) => setValue(event.target.value)}
+          onChange={handleSearchChange}
+          onClick={inputClickHandler}
           type="text"
           className="input"
         />
@@ -52,17 +56,17 @@ const Search = ({
       </div>
       <ul className="autocomplete">
         {value && isOpen
-          ? filteredCountries.map((shoes, key) => {
-              return (
-                <li
-                  id={key}
-                  className="autocomplete__item"
-                  onClick={itemClickHandler}
-                >
-                  {shoes.title}
-                </li>
-              );
-            })
+          ? filteredProducts.map((shoes, key) => {
+          return (
+            <li
+              id={key}
+              className="autocomplete__item"
+              onClick={itemClickHandler}
+            >
+              {shoes.title}
+            </li>
+          )
+        })
           : null}
       </ul>
     </form>

@@ -3,6 +3,9 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import { Provider } from 'react-redux';
 import { store } from './redux';
 
+import './App.scss'
+import './Adaptive.scss'
+
 import Footer from './Component/Footer/Footer';
 import Header from './Component/Header/Header.jsx';
 
@@ -12,8 +15,6 @@ import Shoes from './Component/Pages/PagesShoes/Shoes.jsx';
 
 import axios from 'axios';
 
-import './App.scss'
-import './Adaptive.scss'
 import MakingOrder from './Component/Pages/MakingOrder/MakingOrder.jsx';
 
 
@@ -33,63 +34,144 @@ function App() {
 
   const [item, setItem] = useState('')
 
-  //Фильтр поисковика
-  const [value, setValue] = useState('')
-
-  const filteredCountries = shoesData.filter(shoes => {
-    return shoes.title.toLowerCase().includes(value.toLowerCase())
-  })
-
   //Фильтр товаров
 
-  const [data, setData] = useState([]);
-  const [collection, setCollection] = useState([]);
-  const [isOpen, setIsOpen] = useState(true);
+  const [filteredProducts, setFilteredProducts] = useState(shoesData);
+  const [currentGender, setCurrentGender] = useState("all");
+  const [currentColor, setCurrentColor] = useState("all");
 
-  const filter_cat = (itemData) => {
-    const filterData = shoesData.filter((item) => item.cat === itemData);
-    setData(filterData);
+  const categories = ["All", "Male", "Female", "Unisex", "Children"];
+  const colors = ["All colors", "Black", "White", "Green", "Blue", "Red", "Pink", "Purple", "Orange", "Yellow", "Brown", "Gray"];
+
+  const [searchValue, setSearchValue] = useState("");
+  const [value, setValue] = useState('')
+
+  const [activeGender, setActiveGender] = useState('all')
+
+  const handleClick = (index) => {
+    setActiveGender(index)
   }
+
+  const handleGenderChange = (index) => {
+    setCurrentGender(index);
+    setCurrentColor(index)
+
+    if (index === "All") {
+      setFilteredProducts(shoesData);
+    }
+    if (index === "Male") {
+      const filtered = shoesData.filter((product) => product.gender === 1);
+      setFilteredProducts(filtered);
+    } else if (currentColor) {
+      return shoesData.colors === currentColor();
+    }
+    if (index === "Female") {
+      const filtered = shoesData.filter((product) => product.gender === 2);
+      setFilteredProducts(filtered);
+    }
+    if (index === "Unisex") {
+      const filtered = shoesData.filter((product) => product.gender === 3);
+      setFilteredProducts(filtered);
+    }
+    if (index === "Children") {
+      const filtered = shoesData.filter((product) => product.gender === 4);
+      setFilteredProducts(filtered);
+    }
+
+    // if (index === "All colors") {
+    //   setFilteredProducts(shoesData);Air Jordan 4 Retro Ltning (Premium Batch)
+    // if (index === "Blue") {
+    //   const filtered = shoesData.filter((product) => product.color === 4);
+    //   setFilteredProducts(filtered);
+    // }
+    // if (index === "Red") {
+    //   const filtered = shoesData.filter((product) => product.color === 5);
+    //   setFilteredProducts(filtered);
+    // }
+    // if (index === "Pink") {
+    //   const filtered = shoesData.filter((product) => product.color === 6);
+    //   setFilteredProducts(filtered);
+    // }
+    // if (index === "Purple") {
+    //   const filtered = shoesData.filter((product) => product.color === 7);
+    //   setFilteredProducts(filtered);
+    // }
+    // if (index === "Orange") {
+    //   const filtered = shoesData.filter((product) => product.color === 8);
+    //   setFilteredProducts(filtered);
+    // }
+    // if (index === "Yellow") {
+    //   const filtered = shoesData.filter((product) => product.color === 9);
+    //   setFilteredProducts(filtered);
+    // }
+    // if (index === "Brown") {
+    //   const filtered = shoesData.filter((product) => product.color === 10);
+    //   setFilteredProducts(filtered);
+    // }
+    // if (index === "Gray") {
+    //   const filtered = shoesData.filter((product) => product.color === 11);
+    //   setFilteredProducts(filtered);
+    // }
+
+  };
+  // const handleGenderChange = shoesData.filter((product) => {
+
+  //   if (currentGender && currentColor) {
+  //     return product.color === currentGender && product.size === currentColor;
+  //   } else if (currentGender) {
+  //     return product.color === currentColor;
+  //   } else if (currentGender) {
+  //     return product.size === currentColor;
+  //   } else {
+  //     return true;
+  //   }
+  // });
+
+  const handleSearch = (searchValue) => {
+    const filtered = shoesData.filter((product) =>
+      product.title.toLowerCase().includes(searchValue.toLowerCase())
+    );
+    setFilteredProducts(filtered);
+  };
+
 
   return (
     <Provider store={store}>
       <div className="App">
         <Router>
-          <Header isOpen={isOpen} setIsOpen={setIsOpen} value={value} filteredCountries={filteredCountries} setValue={setValue} shoes={shoesData} />
+          <Header
+            value={value}
+            setValue={setValue}
+            searchValue={searchValue} 
+            setSearchValue={setSearchValue} 
+            onSearch={handleSearch} 
+            filteredProducts={filteredProducts}
+            onChangeGender={handleGenderChange}
+            setFilteredProducts={setFilteredProducts}
+            />
           <Routes>
 
-            <Route exact path='/' element={<AppShoes shoesData={shoesData} item={item}
-              setItem={setItem} />} />
+            <Route exact path='/' element={
+              <AppShoes 
+                shoesData={shoesData} 
+                item={item}
+                setItem={setItem} 
+                shoes={shoesData}
+            />} />
 
             <Route exact path='/shop-shoes' element={
               <ShopShoes
-                data={data}
-                setData={setData}
-                collection={collection}
-                setCollection={setCollection}
-                filter_cat={filter_cat}
-                value={value}
+                filteredProducts={filteredProducts}
+                categories={categories}
+                colors={colors}
+                onChangeGender={handleGenderChange}
                 shoesData={shoesData}
-                filteredCountries={filteredCountries}
                 setItem={setItem}
                 item={item}
-                isOpen={isOpen}
+                activeGender={activeGender}
+                handleClick={handleClick}
               />} />
-            <Route exact path='/:cat' element={
-              <ShopShoes
-                data={data}
-                setData={setData}
-                collection={collection}
-                setCollection={setCollection}
-                filter_cat={filter_cat}
-                value={value}
-                shoesData={shoesData}
-                filteredCountries={filteredCountries}
-                setItem={setItem}
-                item={item}
-                isOpen={isOpen}
-              />} />
-
+            
             <Route exact path='/:title' element={<Shoes shoesData={shoesData} />} />
             <Route exact path='/making-order' element={<MakingOrder shoes={shoesData} />} />
 
