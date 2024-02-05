@@ -16,30 +16,28 @@ import FavoriteNike from "../../Section/FavoriteNike/FavoriteNike.jsx";
 
 const AppShoes = ({ shoesData, item, setItem }) => {
   return (
-    <motion.div
-    initial={{opacity:0}}
-    animate={{opacity: 1}}
-    exit={{ opacity: 0}}
+    <motion.main
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
     >
-      <main>
-        <Shoes shoesData={shoesData} />
-        <Handiwork />
-        <BestSellers />
-        <SportTime
-          item={item}
-          setItem={setItem}      
-          shoesData={shoesData}
-          
-        />
-        <ModernShoes />
-        <FavoriteNike item={item} setItem={setItem} shoesData={shoesData} />
-        <LogoSection />
-        <BestPeople />
-        <Visionaries />
-        <NikeClub />
-        <Warranty />
-      </main>
-    </motion.div>
+      <Shoes shoesData={shoesData} />
+      <Handiwork />
+      <BestSellers />
+      <SportTime
+        item={item}
+        setItem={setItem}
+        shoesData={shoesData}
+
+      />
+      <ModernShoes />
+      <FavoriteNike item={item} setItem={setItem} shoesData={shoesData} />
+      <LogoSection />
+      <BestPeople />
+      <Visionaries />
+      <NikeClub />
+      <Warranty />
+    </motion.main>
   );
 };
 

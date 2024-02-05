@@ -97,13 +97,13 @@
         grid-template-columns: repeat(5, 1fr);
         gap: 10px;
 
-        .input__categories {
+        .color__shoes {
           display: flex;
           justify-content: space-between;
           align-items: center;
           flex-direction: column;
-          height: 120px;
-          width: 80px;
+          height: 80px;
+          width: 60px;
           background-color: hsla(0, 0%, 100%, 0.705);
           border-radius: 10px;
 
@@ -113,38 +113,21 @@
             height: 20px;
             border-radius: 50px;
           }
-        }
 
-        .input__categories:nth-child(1) {
-
-          .circle__color {
-            background-color: #000000;
+          .circle__color.Black {
+            background-color: hsl(0, 0%, 0%);
+          }
+          .circle__color.Red {
+            background-color: hsla(0, 100%, 56%, 0.705);
+          }
+          .circle__color.White {
+            background-color: hsla(0, 0%, 100%, 0.705);
           }
 
-        }
-
-        .input__categories:nth-child(2) {
-
-          .circle__color {
-            background-color: #ffffff;
+          .span__categories {
+            margin-bottom: 10px;
+            font-size: 15px;
           }
-
-        }
-
-        .input__categories:nth-child(3) {
-
-          .circle__color {
-            background-color: #ff3030;
-          }
-
-        }
-
-        .input__categories:nth-child(4) {
-
-          .circle__color {
-            background-color: #308aff;
-          }
-
         }
       }
 
@@ -153,13 +136,112 @@
         padding: 50px 0px 20px 0px;
         display: flex;
         justify-content: space-between;
-        align-items: center;
-
+        align-items: flex-start;
+        flex-direction: column;
         .span__title {
           color: #FFF;
           font-size: 24px;
           font-style: normal;
           font-weight: 600;
+        }
+
+        .select__size {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          width: 90px;
+          height: 40px;
+          margin: 15px 0px;
+          padding: 14px 4px;
+          background-color: #fff;
+          position: relative;
+          border-radius: 10px;
+          transition: all 1s ease;
+          .main__size {
+            position: absolute;
+            top: 5px;
+            left: 8px;
+            width: 80px;
+            height: auto;
+            .svg {
+              position: absolute;
+              top: 0;
+              right: 4px;
+              transform: rotate(90deg);
+              cursor: pointer;
+              transition: all 0.3S ease;
+            }
+            .svg.active {
+              transform: rotate(-90deg);
+            }
+            .svg:hover {
+              
+            }
+            .line {
+              width: 30px;
+              height: 2px;
+              background-color: black;
+              position: absolute;
+              left: 0;
+              right: 0;
+              top: 15px;
+              bottom: 0;
+              margin: auto;
+              transform: rotate(90deg);
+
+            }
+            .size {
+              color: #000000;
+              font-size: 18px;
+              font-style: normal;
+              font-weight: 600;
+              position: absolute;
+              top: 7px;
+              left: 0;
+              
+            }
+          }
+          
+          .menu__size {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            width: 90px;
+            height: 0px;
+            background-color: #fff;
+            position: absolute;
+            bottom: 0px;
+            left: 0px;
+            border-radius: 10px;
+            overflow: auto;
+            transition: all 0.3s ease;
+            .size__shoes {
+              padding: 4px 4px;
+              color: #000000;
+              cursor: pointer;
+              width: 100%;
+              transition: all 0.3s ease;
+              font-size: 14px;
+              font-style: normal;
+              font-weight: 400;
+            }
+            .size__shoes:hover {
+              background-color: #8b1df9;
+              color: #FFF;
+            }
+          }
+         
+        
+        }
+        .select__size.active {
+          border-radius: 10px 10px 0px 0px;
+          border-top: 1px solid #000;
+
+          .menu__size.active {
+            border-radius: 0px 0px 10px 10px;
+            bottom: -95px;
+            height: 100px;
+          }
         }
       }
 

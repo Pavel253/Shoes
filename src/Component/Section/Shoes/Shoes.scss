@@ -165,6 +165,7 @@
           border: 2px solid #FFF;
           position: relative;
           cursor: pointer;
+          transition: all 0.1s;
           h4 {
             color: #FFF;
             font-size: 24px;
@@ -176,7 +177,7 @@
             top: 120px;
             z-index: 110;
             height: 25px;
-          overflow: hidden;
+            overflow: hidden;
           }
 
           img {
@@ -186,6 +187,9 @@
             width: 229px;
             height: 117.589px; 
           }
+        }
+        .card__shoes:hover {
+          border: 6px solid #FFF;
         }
       }
     }

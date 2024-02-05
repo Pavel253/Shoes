@@ -2,12 +2,12 @@
   width: 100%;
   height: 360px;
   cursor: pointer;
-  border-radius: 50px;
+  border-radius: 18px;
   position: relative;
-  background-color: rgba(255, 135, 135, 0.082);
+  background-color: rgb(68, 68, 68);
   .title__shoes {
     position: absolute;
-    top: 210px;
+    top: 180px;
     width: 100%;
     text-align: center;
     color: #FFF;
@@ -17,16 +17,40 @@
     line-height: normal;
     text-transform: capitalize;
   }
-  .price {
+  .infa__shoes {
     position: absolute;
-    top: 170px;
+    top: 230px;
     left: 35px;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
-    text-transform: capitalize;
-    color: #85f857;
+    display: flex;
+    width: 260px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0px;
+    border-radius: 10px;
+    background-color: #FFF;
+    .span__infa {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-direction: column;
+      font-size: 14px;
+      padding: 0px 12px;
+      border-right: 1px solid black;
+      span {
+        padding-top: 4px;
+        font-size: 13px;
+        font-weight: 600;
+      }
+    }
+    .price {
+      padding: 0px 10px;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+      text-transform: capitalize;
+      color: #f85757;
+    }
   }
   .flex__btn {
     position: absolute;

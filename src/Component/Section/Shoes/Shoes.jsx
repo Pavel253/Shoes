@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import "./Shoes.scss";
 
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -13,6 +13,7 @@ import Btn from "../../Button/Btn";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { setCurrentShoes } from "../../../redux/shoes/reducer";
+import Product from "./Product/Product";
 
 const Shoes = ({ shoesData }) => {
   const [data, setData] = useState('');
@@ -23,7 +24,7 @@ const Shoes = ({ shoesData }) => {
 
   const handleClickPages = () => {
     dispatch(setCurrentShoes(data));
-    history(`/${data.title}`);
+    history(`/${data.id}`);
   };
 
   return (
@@ -121,10 +122,10 @@ const Shoes = ({ shoesData }) => {
           }}
             className="slider__product"
           >
-            {shoesData.map((shoes, id) => {
+            {shoesData.map((shoes) => {
               return (
-                <SwiperSlide key={id} id={id} >
-                  <Card data={data} setData={setData} shoes={shoes}  />
+                <SwiperSlide key={shoes.id}  >
+                  <Product data={data} setData={setData} shoes={shoes}  />
                 </SwiperSlide>
               );
             })}
@@ -181,22 +182,5 @@ const Shoes = ({ shoesData }) => {
   );
 };
 
-const Card = ({shoes, data, setData}) => {
-
-  const shoesData = () => {
-    setData(shoes)
-  }
-
-  useEffect(() => {
-    shoesData()
-  })
-
-  return (
-    <div className="card__shoes" onClick={() => shoesData()}>
-      <img src={shoes.image} alt="" />  
-      <h4>{shoes.title}</h4>
-    </div>
-  );
-};
 
 export default Shoes;

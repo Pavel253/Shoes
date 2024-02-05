@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 const Search = ({
   handleSearchChange,
   filteredProducts,
   value,
-  setValue
+  setValue,
 }) => {
 
   const [isOpen, setIsOpen] = useState(true);
@@ -30,6 +30,21 @@ const Search = ({
           type="text"
           className="input"
         />
+        <ul className="autocomplete">
+        {value && isOpen
+          ? filteredProducts.map((shoes, key) => {
+          return (
+            <li
+              key={key}
+              className="autocomplete__item"
+              onClick={itemClickHandler}
+            >
+              {shoes.title}
+            </li>
+          )
+        })
+          : null}
+      </ul>
         <Link className="btn__link" to="/shop-shoes">
           <button className="btn__search">
             <svg
@@ -54,21 +69,6 @@ const Search = ({
           </button>
         </Link>
       </div>
-      <ul className="autocomplete">
-        {value && isOpen
-          ? filteredProducts.map((shoes, key) => {
-          return (
-            <li
-              id={key}
-              className="autocomplete__item"
-              onClick={itemClickHandler}
-            >
-              {shoes.title}
-            </li>
-          )
-        })
-          : null}
-      </ul>
     </form>
   );
 };

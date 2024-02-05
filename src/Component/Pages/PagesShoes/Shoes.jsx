@@ -24,7 +24,17 @@ const Shoes = ({ shoesData }) => {
 
   if (!shoes) return null;
 
-  // const history = useNavigate();
+  const genderId = () => {
+    if (shoes.gender === 1) {
+      return 'Male'
+    } 
+    if (shoes.gender === 2) {
+      return 'Female'
+    }
+    if (shoes.gender === 3) {
+      return 'Children'
+    }
+  }
 
   return (
     <motion.div
@@ -67,7 +77,7 @@ const Shoes = ({ shoesData }) => {
               </SwiperSlide>
             </Swiper>
           </div>
-          <InformationSs shoes={shoes} />
+          <InformationSs shoesData={shoesData} size={shoes.size} shoes={shoes} />
         </div>
         <div className="info__ss">
           <div className="categories__material">
@@ -85,11 +95,11 @@ const Shoes = ({ shoesData }) => {
             </div>
             <div className="material">
               <h6 className="title">Gender</h6>
-              <span className="span">Man/Woman</span>
+              <span className="span">{genderId()}</span>
             </div>
             <div className="material">
               <h6 className="title">Size</h6>
-              <span className="span">45</span>
+              <span className="span">{shoes.size}</span>
             </div>
             <div className="material">
               <h6 className="title">Manufacturer country</h6>

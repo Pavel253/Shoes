@@ -9,13 +9,14 @@ import "swiper/css";
 import "swiper/css/pagination";
 
 const BurgerMenu = ({ active, setActive }) => {
+
   const handleClick = () => {
     window.location.assign("https://ru.wikipedia.org/wiki/Nike");
   };
 
   return (
     <div className={active ? "menu active" : "menu"}>
-      <div className="blur"></div>
+      <div className="blur" onClick={() => setActive(false)}></div>
       <div className="menu__site">
         <div className="container">
           <div className="menu__email">
@@ -62,7 +63,7 @@ const BurgerMenu = ({ active, setActive }) => {
               <SwiperSlide>
                 <span className="span__history">
                   In 1971, the company received additional funding from Nissho
-                  Iwai Corporation (since 2004) Sojitz) and was able to
+                  Iwai Corporation (since 2004) Sojitz and was able to
                   significantly expand its operations, in In the same year, the
                   use of the Nike trademark and Swoosh. In 1972, the following
                   were developed: Nike Moon sneakers with a waffle outsole

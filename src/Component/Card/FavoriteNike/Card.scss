@@ -1,6 +1,6 @@
 .card__favorite {
   width: 313px;
-  height: 512px;
+  height: 612px;
   position: relative;
   cursor: pointer;
   a {
@@ -42,10 +42,10 @@
     background: conic-gradient(from 180deg at 50% 50%, #F00 0deg, rgba(255, 0, 0, 0.00) 360deg);
     background-blend-mode: luminosity;
     filter: blur(125px);
-    width: 292px;
-    height: 292px;
+    width: 262px;
+    height: 262px;
     z-index: 100;
-    top: 90px;
+    top: 160px;
     right: 0;
     position: absolute;
     z-index: 0;

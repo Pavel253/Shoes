@@ -9,6 +9,7 @@ import {
   deleteItemFromCart,
 } from "../../../../redux/cart/reducer";
 import { setCurrentShoes } from "../../../../redux/shoes/reducer";
+import colorId from "../Product/color";
 
 const Card = ({ setItem, setActive, shoes, id }) => {
   const dispatch = useDispatch();
@@ -36,7 +37,7 @@ const Card = ({ setItem, setActive, shoes, id }) => {
 
   const handleClickPages = () => {
     dispatch(setCurrentShoes(shoes));
-    history(`/${shoes.title}`);
+    history(`/${shoes.id}`);
   };
 
   return (
@@ -94,10 +95,22 @@ const Card = ({ setItem, setActive, shoes, id }) => {
           />
         </svg>
       </button>
-      <span className="price">{shoes.price}</span>
       <h2 className="title__shoes">{shoes.title}</h2>
       <div className="btn__link" onClick={handleClickPages}>
         <img className="shoes__img" src={shoes.image} alt="" />
+      </div>
+      <div className="infa__shoes">
+        <div className="span__infa">color:
+          <span className="color">{colorId(shoes.color)}</span>
+        </div>
+        <div className="span__infa">size:
+          <span className="size">{shoes.size}</span>
+        </div>
+        <div className="span__infa">quantity:
+          <span className="quantity">{shoes.quantity}</span>
+        </div>
+        <span className="price">{shoes.price}</span>
+
       </div>
       <div className="flex__btn">
         <button className="btn">buy</button>
