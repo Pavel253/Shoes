@@ -1,7 +1,13 @@
 import React from "react";
 import "./Footer.scss";
 import imgLogo from "../../Img/Logo 02.png";
+
 const Footer = () => {
+
+  const handleClick = () => {
+    window.open('https://www.youtube.com/@nike', '_blank');
+  };
+
   return (
     <footer className="footer">
       <div className="container">
@@ -93,6 +99,7 @@ const Footer = () => {
           </p>
           <div className="svg__flex">
           <svg
+            onClick={handleClick}
             width="16"
             height="16"
             viewBox="0 0 16 16"

@@ -9,6 +9,10 @@ const SportTime = ({ shoesData, setItem }) => {
   const [active, setActive] = useState(false);
   const [activeTwo, setActiveTwo] = useState(false);
 
+  const filteredProducts = shoesData.filter(
+    (product, index, self) => index === self.findIndex((p) => p.title === product.title)
+  );
+
   return (
     <section className="sport__time section">
       <div className="container">
@@ -16,7 +20,7 @@ const SportTime = ({ shoesData, setItem }) => {
         <div
           className={active ? "shoes__container active" : "shoes__container"}
         >
-          {shoesData.map((shoes, id) => {
+          {filteredProducts.map((shoes, id) => {
             return (
               <Card
                 setItem={setItem}

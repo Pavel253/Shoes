@@ -1,0 +1,19 @@
+.pagination {
+  padding-top: 60px;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .li {
+    margin: 0px 8px;
+    .page__link {
+      padding: 8px 12px;
+      background-color: #fff;
+      color: #000;
+      font-size: 16px;
+      border-radius: 3px;
+    }
+  }
+}

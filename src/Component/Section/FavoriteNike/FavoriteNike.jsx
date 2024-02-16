@@ -11,6 +11,10 @@ import "swiper/css/navigation";
 
 const FavoriteNike = ({ shoesData, item, setItem }) => {
 
+  const filteredProducts = shoesData.filter(
+    (product, index, self) => index === self.findIndex((p) => p.title === product.title)
+  );
+
   return (
     <section className="favorite__nike section">
       <div className="container">
@@ -41,7 +45,7 @@ const FavoriteNike = ({ shoesData, item, setItem }) => {
         }}
         className="card__container"
       >
-        {shoesData.map((shoes, id) => {
+        {filteredProducts.map((shoes, id) => {
           return (
             <SwiperSlide>
               <Card

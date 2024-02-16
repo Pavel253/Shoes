@@ -51,8 +51,6 @@ const InformationSs = ({ shoes, shoesData, size }) => {
 
         <div className="container__ss">
 
-          {/* logika */}
-
           <button className="color__shoes">
             <span className={`circle__color ${colorId(shoes.color)}`} />
             <span className="span__categories">{colorId(shoes.color)}</span>
@@ -62,7 +60,7 @@ const InformationSs = ({ shoes, shoesData, size }) => {
         </div>
       </div>
 
-      <form className="ss__size">
+      <div className="ss__size">
         <span className="span__title">Choose a size:</span>
 
         <div className={sizeActive ? "select__size active" : "select__size"}>
@@ -80,7 +78,7 @@ const InformationSs = ({ shoes, shoesData, size }) => {
 
         </div>
 
-      </form>
+      </div>
 
       <button className="btn" onClick={handleClick}>
         {isItemInCart ? "Remove from cart" : "To cart"}

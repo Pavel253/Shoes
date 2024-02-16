@@ -36,14 +36,6 @@ const AppUser = () => {
             <button className='btn'>Change</button>
           </form>
         </div>
-        {/*
-        <div className="block__user pay__user">
-            <div className="form__container">
-              <h3>Add a Payment Method</h3>
-
-            </div>
-          </div> 
-          */}
       </div>
     </main>
 

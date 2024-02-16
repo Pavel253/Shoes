@@ -48,20 +48,23 @@
         padding-left: 90px;
 
         .title {
+          opacity: 1;
           color: #FFF;
           font-size: 48px;
           font-style: italic;
           font-weight: 700;
           line-height: 48px;
           letter-spacing: 7.68px;
+
+
         }
 
         .information__product {
           display: flex;
           justify-content: space-between;
-          align-items: center;
+          align-items: flex-start;
           padding: 32px 0px;
-          width: 430px;
+          width: 550px;
 
           .price {
             color: #FFF;
@@ -126,7 +129,7 @@
             }
 
             img {
-              
+
               margin-left: 8px;
             }
           }
@@ -166,6 +169,7 @@
           position: relative;
           cursor: pointer;
           transition: all 0.1s;
+
           h4 {
             color: #FFF;
             font-size: 24px;
@@ -185,9 +189,10 @@
             top: -19px;
             left: 22px;
             width: 229px;
-            height: 117.589px; 
+            height: 117.589px;
           }
         }
+
         .card__shoes:hover {
           border: 6px solid #FFF;
         }
@@ -202,12 +207,14 @@
     left: 0;
     height: 158px;
     z-index: 100;
+
     .flex__flask {
       display: flex;
       justify-content: space-around;
       padding: 20px 0px;
       position: absolute;
       width: 100%;
+
       span {
         color: #FFF;
         font-size: 32px;
@@ -224,10 +231,88 @@
       transform: rotate(2.923deg);
       z-index: 101;
     }
+
     .flex__flask:nth-child(2) {
       top: 0;
-      background: #BA0000; 
-      transform: rotate(-1.907deg); 
+      background: #BA0000;
+      transform: rotate(-1.907deg);
     }
+  }
+}
+
+.shoes.active {
+
+  .title__shoes {
+    animation-name: active-animation;
+    animation-duration: 0.6s;
+  }
+
+  .container .container__product .product__title .title {
+    animation-name: active-animation;
+    animation-duration: 0.6s;
+  }
+
+  .container .container__product .product__title .information__product .price {
+    animation-name: active-animation;
+    animation-duration: 0.6s;
+  }
+
+  .container__ss .color__shoes {
+    animation-name: active-animation;
+    animation-duration: 0.6s;
+  }
+
+  .ss__size {
+    animation-name: active-animation;
+    animation-duration: 0.6s;
+  }
+
+}
+
+
+.shoes.click {
+  .title__shoes {
+    animation-name: click-animation;
+    animation-duration: 0.6s;
+  }
+
+  .container .container__product .product__title .title {
+    animation-name: click-animation;
+    animation-duration: 0.6s;
+  }
+
+  .container .container__product .product__title .information__product .price {
+    animation-name: click-animation;
+    animation-duration: 0.6s;
+  }
+
+  .container__ss .color__shoes {
+    animation-name: click-animation;
+    animation-duration: 0.6s;
+  }
+
+  .ss__size {
+    animation-name: click-animation;
+    animation-duration: 0.6s;
+  }
+}
+
+@keyframes click-animation {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes active-animation {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
   }
 }

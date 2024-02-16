@@ -14,21 +14,33 @@ import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { setCurrentShoes } from "../../../redux/shoes/reducer";
 import Product from "./Product/Product";
+import Choice from "./Choice/Choice";
 
 const Shoes = ({ shoesData }) => {
-  const [data, setData] = useState('');
+  const [data, setData] = useState(shoesData);
+
+  const [sizeData, setSizeData] = useState(data.size)
+  const [animate, setAnimate] = useState(false);
 
   const dispatch = useDispatch();
   const history = useNavigate();
-
 
   const handleClickPages = () => {
     dispatch(setCurrentShoes(data));
     history(`/${data.id}`);
   };
 
+  const handleClickAnimate = () => {
+    setAnimate(!animate);
+  };
+
+  const filteredProducts = shoesData.filter(
+    (product, index, self) => index === self.findIndex((p) => p.title === product.title)
+  );
+
+
   return (
-    <section className="shoes section">
+    <section className={animate ? "section shoes active" : "section shoes click"}>
       <svg
         className="svg"
         viewBox="0 0 2106 707"
@@ -61,33 +73,10 @@ const Shoes = ({ shoesData }) => {
           <img src={data.fonImage} alt="" />
           <div className="product__title">
             <h2 className="title">{data.title}</h2>
-            <div className="information__product">
-              <span className="price">${data.price}</span>
-              <div className="size__product">
-                <span className="size__span">Size</span>
-                <span></span>
-                <svg
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <g clip-path="url(#clip0_46_861)">
-                    <path
-                      d="M18 5.99998H16C16 3.78998 14.21 1.99998 12 1.99998C9.79 1.99998 8 3.78998 8 5.99998H6C4.9 5.99998 4 6.89998 4 7.99998V20C4 21.1 4.9 22 6 22H18C19.1 22 20 21.1 20 20V7.99998C20 6.89998 19.1 5.99998 18 5.99998ZM12 3.99998C13.1 3.99998 14 4.89998 14 5.99998H10C10 4.89998 10.9 3.99998 12 3.99998ZM18 20H6V7.99998H8V9.99998C8 10.55 8.45 11 9 11C9.55 11 10 10.55 10 9.99998V7.99998H14V9.99998C14 10.55 14.45 11 15 11C15.55 11 16 10.55 16 9.99998V7.99998H18V20Z"
-                      fill="white"
-                    />
-                  </g>
-                  <defs>
-                    <clipPath id="clip0_46_861">
-                      <rect width="24" height="24" fill="white" />
-                    </clipPath>
-                  </defs>
-                </svg>
-              </div>
-            </div>
+
+            <Choice sizeData={sizeData} setSizeData={setSizeData} shoes={shoesData} data={data} />
             <Btn click={handleClickPages} items="More Details" />
+
           </div>
         </div>
         <div className="slider">
@@ -122,10 +111,10 @@ const Shoes = ({ shoesData }) => {
           }}
             className="slider__product"
           >
-            {shoesData.map((shoes) => {
+            {filteredProducts.map((shoes, index) => {
               return (
-                <SwiperSlide key={shoes.id}  >
-                  <Product data={data} setData={setData} shoes={shoes}  />
+                <SwiperSlide key={index}  >
+                  <Product animate={animate} clickAnimate={handleClickAnimate} data={data} setData={setData} shoes={shoes}  />
                 </SwiperSlide>
               );
             })}

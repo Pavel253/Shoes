@@ -1,14 +1,19 @@
 .re__card__shoes-buy {
   position: relative;
-  width: 300px;
+  width: 290px;
   height: 300px;
   cursor: pointer;
   border-radius: 50px;
   background-color: rgba(173, 173, 173, 0.363);
+  z-index: 1;
   .title__shoes {
     position: absolute;
-    bottom: 80px;
-    width: 100%;
+    bottom: 120px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
     text-align: center;
     color: #FFF;
     font-size: 20px;
@@ -16,13 +21,138 @@
     font-weight: 400;
     line-height: normal;
     text-transform: capitalize;
+    height: 24px;
+    overflow: hidden;
   }
+
   .btn__link {
     padding: 10px 30px 10px 30px;
+
     .shoes__img {
       width: 240px;
     }
   }
+
+  .flex__infa {
+    position: absolute;
+    bottom: 75px;
+    height: 38px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 150px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 8px;
+    background-color: #fff;
+    border-radius: 12px;
+    transition: all 0.4s ease;
+    z-index: 32;
+    .infa__span {
+      color: #000000;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      text-transform: capitalize;
+      padding: 0px 5px;
+      transition: all 0.4s ease;
+      padding: 0px 10px;
+    }
+
+    .size__menu {
+      position: absolute;
+      bottom: 0px;
+      left: 0;
+      width: 60px;
+      height: 0px;
+      background-color: white;
+      transition: all 0.6s ease;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: space-between;
+      overflow: auto;
+      z-index: -1;
+      border-right: 2px solid black;
+      transition: all 0.4s ease;
+
+    }
+
+    .color__menu {
+      position: absolute;
+      bottom: 0px;
+      right: 0;
+      width: 90px;
+      height: 0px;
+      background-color: white;
+      transition: all 0.6s ease;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: space-between;
+      overflow: auto;
+      z-index: -1;
+      border-left: 2px solid #000;
+      transition: all 0.4s ease;
+
+    }
+
+    .line {
+      background-color: #000000;
+      width: 20px;
+      border-radius: 3px;
+      height: 3px;
+      transform: rotate(90deg);
+    }
+  }
+
+  .flex__infa.active {
+    border-radius: 10px 10px 0px 0px;
+    overflow: inherit;
+    z-index: 2;
+    transition: all 0.4s ease;
+
+    .size__menu.active {
+      border-radius: 0px 0px 0px 10px;
+      bottom: -60px;
+      height: 60px;
+      transition: all 0.4s ease;
+
+      .size {
+        padding: 4px 14px;
+        transition: all 0.4s ease;
+      }
+      .size:hover {
+        width: 100%;
+        background-color: #3d3d3d;
+        color: #ffffff;
+      }
+    }
+    .color__menu.active {
+      border-radius: 0px 0px 10px 0px;
+      bottom: -60px;
+      height: 60px;
+      width: 90px;
+      transition: all 0.4s ease;
+
+      .color {
+        padding: 4px 14px;
+        transition: all 0.4s ease;
+      }
+      .color:hover {
+        width: 100%;
+        background-color: #3d3d3d;
+        color: #ffffff;
+      }
+    }
+
+
+  }
+
   .flex__btn {
     position: absolute;
     bottom: 20px;
@@ -30,6 +160,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
     .btn {
       margin: 0px 10px;
       padding: 7px 27px;
@@ -38,5 +169,5 @@
       color: black;
     }
   }
-  
+
 }

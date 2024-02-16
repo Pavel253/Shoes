@@ -7,6 +7,7 @@ import Filter from "./Filter/Filter.jsx";
 import Product from './Product/Product'
 import ProductList from './ProductList/ProductList.jsx';
 import "./ShopShoes.scss";
+import Pagination from "./Pagination/Pagination.jsx";
 
 
 const ShopShoes = ({
@@ -14,9 +15,6 @@ const ShopShoes = ({
   setItem,
 
   item,
-  filters,
-  filteredProducts,
-  handlePriceChange,
 
   genderFilter,
   colorFilter,
@@ -29,13 +27,24 @@ const ShopShoes = ({
   setSizeFilter,
   setPriceFilterMax,
   setPriceFilterMin,
+  setFilters,
 
-  sizeFilter44,
-
-  setSizeFilter44,
+  itemsPerPage,
+  filteredProducts
 }) => {
   const [active] = useState(false);
   const [modalActive, setModalActive] = useState(false);
+
+
+  const [currentPage, setCurrentPage] = useState(1);
+  const indexOfLastItem = currentPage * itemsPerPage;
+  const indexOfFirstItem = indexOfLastItem - itemsPerPage;
+  const currentItems = filteredProducts.slice(indexOfFirstItem, indexOfLastItem);
+
+  const handleClick = (pageNumber) => {
+    setCurrentPage(pageNumber);
+  };
+
 
   return (
     <motion.div
@@ -57,10 +66,9 @@ const ShopShoes = ({
               size={sizeFilter}
               priceMax={priceFilterMax}
               priceMin={priceFilterMin}
-
-              size44={sizeFilter44}
             />
             <Filter
+              setFilters={setFilters}
               colorFilter={colorFilter}
               setGenderFilter={setGenderFilter}
               setColorFilter={setColorFilter}
@@ -72,18 +80,20 @@ const ShopShoes = ({
               sizeFilter={sizeFilter}
               priceMax={priceFilterMax}
               priceMin={priceFilterMin}
-              
-              setSizeFilter44={setSizeFilter44}
             />
           </aside>
 
           <ProductList
-            filteredProducts={filteredProducts}
             active={active}
-            filters={filters}
+            shoesData={shoesData}
+            filteredProducts={filteredProducts}
+            currentItems={currentItems}
           />
-
         </div>
+        <Pagination itemsPerPage={itemsPerPage}
+        totalItems={filteredProducts.length}
+        currentPage={currentPage}
+        onClick={handleClick} />
 
         <ModalCarousel
           setItem={setItem}

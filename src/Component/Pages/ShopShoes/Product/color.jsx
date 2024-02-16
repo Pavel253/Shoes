@@ -9,25 +9,25 @@ const colorId = (color) => {
       return 'White'
     }
     if (color === 3) {
-      return 'Green'
+      return 'Red'
     } 
     if (color === 4) {
-      return 'Red'
+      return 'Purple'
     }
     if (color === 5) {
-      return 'Purple'
+      return 'Pink'
     } 
     if (color === 6) {
-      return 'Pink'
+      return 'Yellow'
     }
     if (color === 7) {
-      return 'Yellow'
+      return 'Blue'
     } 
     if (color === 8) {
-      return 'Orange'
+      return 'Green'
     }
     if (color === 9) {
-      return 'Blue'
+      return 'Orange'
     }
   }
 

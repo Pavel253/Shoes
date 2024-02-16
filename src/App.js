@@ -33,7 +33,9 @@ function App() {
       });
   }, [])
 
+
   const [item, setItem] = useState('')
+
 
   //Фильтр товаров
 
@@ -130,6 +132,7 @@ function App() {
                 setSizeFilter={setSizeFilter}
                 setPriceFilterMax={setPriceFilterMax}
                 setPriceFilterMin={setPriceFilterMin}
+                itemsPerPage={15}
               />} />
 
             <Route exact path='/:id' element={<Shoes shoesData={shoesData} />} />

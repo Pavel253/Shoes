@@ -27,7 +27,7 @@ const Shoes = ({ shoesData }) => {
   const genderId = () => {
     if (shoes.gender === 1) {
       return 'Male'
-    } 
+    }
     if (shoes.gender === 2) {
       return 'Female'
     }
@@ -35,6 +35,13 @@ const Shoes = ({ shoesData }) => {
       return 'Children'
     }
   }
+
+  const filteredProducts = shoesData.filter(product => {
+    return (
+      (shoes.size === product.size & product.quantity > 1)
+    );
+  });
+
 
   return (
     <motion.div
@@ -51,29 +58,21 @@ const Shoes = ({ shoesData }) => {
               slidesPerView={1}
               pagination={{ clickable: true }}
             >
+
               <SwiperSlide>
-                <img className="img" src={shoes.image1} alt="" />
+                <img className="img" src={shoes.fonImage1} alt="" />
               </SwiperSlide>
               <SwiperSlide>
-                <img className="img" src={shoes.image2} alt="" />
+                <img className="img" src={shoes.fonImage2} alt="" />
               </SwiperSlide>
               <SwiperSlide>
-                <img className="img" src={shoes.image3} alt="" />
+                <img className="img" src={shoes.fonImage3} alt="" />
               </SwiperSlide>
               <SwiperSlide>
-                <img className="img" src={shoes.image4} alt="" />
+                <img className="img" src={shoes.fonImage4} alt="" />
               </SwiperSlide>
               <SwiperSlide>
-                <img className="img" src={shoes.image5} alt="" />
-              </SwiperSlide>
-              <SwiperSlide>
-                <img className="img" src={shoes.image6} alt="" />
-              </SwiperSlide>
-              <SwiperSlide>
-                <img className="img" src={shoes.image7} alt="" />
-              </SwiperSlide>
-              <SwiperSlide>
-                <img className="img" src={shoes.image8} alt="" />
+                <img className="img" src={shoes.fonImage5} alt="" />
               </SwiperSlide>
             </Swiper>
           </div>
@@ -121,21 +120,21 @@ const Shoes = ({ shoesData }) => {
           </p>
         </div>
         <Swiper
-          modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
+          modules={[Navigation, Pagination, Scrollbar, A11y]}
           spaceBetween={50}
-          autoplay={{
-            delay: 4000,
-            disableOnInteraction: false,
-            stopOnLastSlide: false,
-          }}
+          // autoplay={{
+          //   delay: 4000,
+          //   disableOnInteraction: false,
+          //   stopOnLastSlide: false,
+          // }}
           slidesPerView={4}
           scrollbar={{ draggable: true }}
           className="recommendation"
         >
-          {shoesData.map((shoes, id) => {
+          {filteredProducts.map((shoes, id) => {
             return (
               <SwiperSlide>
-                <ReCard shoes={shoes} />
+                <ReCard shoesData={shoesData} shoes={shoes} />
               </SwiperSlide>
             );
           })}
