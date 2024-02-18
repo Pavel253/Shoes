@@ -56,6 +56,15 @@ const InformationSs = ({ shoes, shoesData, size }) => {
             <span className="span__categories">{colorId(shoes.color)}</span>
           </button>
 
+          {shoes.color1 && <button className="color__shoes">
+            <span className={`circle__color ${colorId(shoes.color1)}`} />
+            <span className="span__categories">{colorId(shoes.color1)}</span>
+          </button>}
+
+          {shoes.color2 && <button className="color__shoes">
+            <span className={`circle__color ${colorId(shoes.color2)}`} />
+            <span className="span__categories">{colorId(shoes.color2)}</span>
+          </button>}
 
         </div>
       </div>

@@ -5,6 +5,7 @@
   border-radius: 18px;
   position: relative;
   background-color: rgb(68, 68, 68);
+
   .title__shoes {
     position: absolute;
     top: 180px;
@@ -17,61 +18,98 @@
     line-height: normal;
     text-transform: capitalize;
   }
-  .infa__shoes {
-    position: absolute;
-    top: 230px;
-    left: 35px;
+
+  .infa {
     display: flex;
-    width: 260px;
     justify-content: space-between;
     align-items: center;
-    padding: 8px 0px;
-    border-radius: 10px;
-    background-color: #FFF;
-    .span__infa {
+
+    .infa__shoes {
+      position: absolute;
+      top: 230px;
+      left: 35px;
       display: flex;
+      width: 260px;
       justify-content: space-between;
       align-items: center;
-      flex-direction: column;
-      font-size: 14px;
-      padding: 0px 12px;
-      border-right: 1px solid black;
-      span {
-        padding-top: 4px;
-        font-size: 13px;
+      padding: 8px 0px;
+      border-radius: 10px;
+      background-color: #FFF;
+
+      .span__infa {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+        font-size: 14px;
+        padding: 0px 12px;
+        border-right: 1px solid black;
+
+        span {
+          padding-top: 4px;
+          font-size: 13px;
+          font-weight: 600;
+        }
+      }
+
+      .price {
+        padding: 0px 10px;
+        font-size: 20px;
+        font-style: normal;
         font-weight: 600;
+        line-height: normal;
+        text-transform: capitalize;
+        color: #f85757;
       }
     }
-    .price {
-      padding: 0px 10px;
-      font-size: 20px;
-      font-style: normal;
-      font-weight: 600;
-      line-height: normal;
-      text-transform: capitalize;
-      color: #f85757;
+
+    .flex__btn {
+      position: absolute;
+      bottom: 20px;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .btn {
+        margin: 0px 10px;
+        padding: 7px 17px;
+        background-color: #fff;
+        font-weight: 500;
+        font-size: 16px;
+        color: black;
+        transition: all 0.6s;
+      }
+
+      .btn.active {
+        padding: 7px 32px;
+      }
     }
   }
-  .flex__btn {
+
+  .none__shoes {
     position: absolute;
-    bottom: 20px;
+    top: 230px;
     width: 100%;
+    text-align: center;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    .btn {
-      margin: 0px 10px;
-      padding: 7px 17px;
-      background-color: #fff;
+    .span {
+      color: #fff;
       font-weight: 500;
       font-size: 16px;
-      color: black;
-      transition: all 0.6s;
+      padding-bottom: 15px;
     }
-    .btn.active {
-      padding: 7px 32px;
+    .btn {
+      color: #000000;
+      font-weight: 500;
+      font-size: 16px;
+      background-color: #fff;
+
     }
   }
+
   .shoes__img {
     position: absolute;
     top: -10px;
@@ -79,8 +117,9 @@
     right: 0;
     margin: auto;
     width: 300px;
-    height: 174.411px; 
+    height: 174.411px;
   }
+
   .modal__img {
     background-color: transparent;
     position: absolute;
@@ -93,6 +132,7 @@
   0% {
     opacity: 0;
   }
+
   100% {
     opacity: 1;
   }

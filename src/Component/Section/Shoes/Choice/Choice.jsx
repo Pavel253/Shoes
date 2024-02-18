@@ -21,6 +21,7 @@ const Choice = ({ data, shoes, setSizeData, sizeData }) => {
     );
   });
 
+
   return (
 
     <div className="information__product">
@@ -36,6 +37,10 @@ const Choice = ({ data, shoes, setSizeData, sizeData }) => {
             <span className="span__categories">{colorId(data.color)}</span>
           </button>
 
+          {data.color1 && <button className="color__shoes">
+            <span className={`circle__color ${colorId(data.color1)}`} />
+            <span className="span__categories">{colorId(data.color1)}</span>
+          </button>}
 
         </div>
       </div>

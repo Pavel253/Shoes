@@ -2,19 +2,16 @@ import React, { useState } from "react";
 
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import ModalCarousel from "../../Modal/ModalCarousel.jsx";
 import Filter from "./Filter/Filter.jsx";
 import Product from './Product/Product'
 import ProductList from './ProductList/ProductList.jsx';
 import "./ShopShoes.scss";
 import Pagination from "./Pagination/Pagination.jsx";
+import ModalCarousel from "../../Modal/ModalCarousel.jsx";
 
 
 const ShopShoes = ({
   shoesData,
-  setItem,
-
-  item,
 
   genderFilter,
   colorFilter,
@@ -34,7 +31,6 @@ const ShopShoes = ({
 }) => {
   const [active] = useState(false);
   const [modalActive, setModalActive] = useState(false);
-
 
   const [currentPage, setCurrentPage] = useState(1);
   const indexOfLastItem = currentPage * itemsPerPage;
@@ -88,19 +84,20 @@ const ShopShoes = ({
             shoesData={shoesData}
             filteredProducts={filteredProducts}
             currentItems={currentItems}
+            modalActive={modalActive}
+            setModalActive={setModalActive}
           />
         </div>
-        <Pagination itemsPerPage={itemsPerPage}
-        totalItems={filteredProducts.length}
-        currentPage={currentPage}
-        onClick={handleClick} />
+        <Pagination
+          itemsPerPage={itemsPerPage}
+          totalItems={filteredProducts.length}
+          currentPage={currentPage}
+          onClick={handleClick}
+        />
 
         <ModalCarousel
-          setItem={setItem}
-          item={item}
           active={modalActive}
           setActive={setModalActive}
-          shoes={shoesData}
         />
       </main>
     </motion.div>

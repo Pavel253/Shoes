@@ -1,0 +1,85 @@
+.slide {
+  width: 630px;
+  height: 400px;
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  // margin: 0px 30px 0px 30px;
+  .img__slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 400px;
+  }
+  .block {
+    transition: all 0.3s;
+    background-color: rgba(0, 0, 0, 0.4);
+    position: absolute;
+    top: -400px;
+    left: 0;
+    width: 100%;
+    height: 400px;
+  }
+  .text__slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto auto;
+    color: #FFF;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+    opacity: 0;
+    transition: all 0.9S;
+    width: 80%;
+    height: 80%;
+  }
+}
+
+.slide:hover {
+  .block {
+    position: absolute;
+    top: -0px;
+    left: 0;
+    width: 100%;
+    height: 400px;
+  }
+  .text__slide {
+    opacity: 1;
+  }
+}
+.swiper {
+  padding-bottom: 60px;
+}
+.swiper-button-prev, .swiper-button-next {
+  position: absolute;
+  top: var(--swiper-navigation-top-offset, 42%);
+  width: calc(var(--swiper-navigation-size) / 44 * 27);
+  height: var(--swiper-navigation-size);
+  margin-top: calc(0px - (var(--swiper-navigation-size) / 2));
+  z-index: 10;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--swiper-navigation-color, #000000);
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 28px;
+}
+.swiper-pagination-bullet {
+  background: var(--swiper-pagination-bullet-inactive-color, #fff);
+  width: var(--swiper-pagination-bullet-width, var(--swiper-pagination-bullet-size, 18px));
+  height: var(--swiper-pagination-bullet-height, var(--swiper-pagination-bullet-size, 6px));
+  display: inline-block;
+  border-radius: var(--swiper-pagination-bullet-border-radius, 2px);
+  opacity: var(--swiper-pagination-bullet-inactive-opacity, 1);
+}
+
+.swiper-pagination-bullet-active {
+  background: var(--swiper-pagination-bullet-inactive-color, #9728ff);
+}

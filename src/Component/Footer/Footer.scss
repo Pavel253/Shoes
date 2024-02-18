@@ -92,6 +92,13 @@
           font-style: normal;
           font-weight: 400;
           line-height: normal;
+          cursor: pointer;
+          transition: all 0.4s;
+        }
+        ul li:hover {
+          padding-bottom: 15px;
+          color: #FFF;
+          font-size: 21px;
         }
       }
 

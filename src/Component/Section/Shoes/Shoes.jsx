@@ -35,7 +35,7 @@ const Shoes = ({ shoesData }) => {
   };
 
   const filteredProducts = shoesData.filter(
-    (product, index, self) => index === self.findIndex((p) => p.title === product.title)
+    (product, index, self) => index === self.findIndex((p) => p.title === product.title || p.quantity === 0)
   );
 
 
@@ -70,7 +70,7 @@ const Shoes = ({ shoesData }) => {
       <h1 className="title__shoes">{data.title}</h1>
       <div className="container">
         <div className="container__product">
-          <img src={data.fonImage} alt="" />
+          <img className="image__fon" src={data.image} alt="" />
           <div className="product__title">
             <h2 className="title">{data.title}</h2>
 

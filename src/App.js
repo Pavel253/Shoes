@@ -17,9 +17,29 @@ import axios from 'axios';
 
 import MakingOrder from './Component/Pages/MakingOrder/MakingOrder.jsx';
 import AppUser from './Component/Pages/AppUser/AppUser.jsx';
+import OurService from './Component/Pages/Subpages/OurService/OurService.jsx';
+import ContantUs from './Component/Pages/Subpages/ContantUs/ContantUs.jsx';
+import OurEnterprise from './Component/Pages/Subpages/OurEnterprise/OurEnterprise.jsx';
+import PagesNews from './Component/Pages/PagesNews/PagesNews.jsx';
+import Page from './Component/Pages/PagesNews/Page/Page.jsx';
 
 
 function App() {
+  //Новости
+
+  const [newsData, setNewsData] = useState([])
+
+  useEffect(() => {
+    axios.get(`http://127.0.0.1:8000/api/v1/news/`)
+      .then(response => {
+        setNewsData(response.data)
+      })
+      .catch(error => {
+        console.error(error);
+      });
+  }, [])
+
+  //Товары
 
   const [shoesData, setShoesData] = useState([])
 
@@ -60,8 +80,7 @@ function App() {
       (!value || product.title.toLowerCase().includes(value.toLowerCase())) &&
       (!searchValue || product.title.toLowerCase().includes(searchValue.toLowerCase())) &&
       (genderFilter === 'All' || product.gender === genderFilter) &&
-      (colorFilter === 'All' || product.color === colorFilter) &&
-
+      (colorFilter === 'All' || product.color === colorFilter || product.color1 === colorFilter) &&
       (sizeFilter === 'All' || (product.size === sizeFilter & product.quantity > 0)) &&
 
       (!priceFilterMin || Number(product.price) >= priceFilterMin) &&
@@ -142,6 +161,17 @@ function App() {
               <AppUser
                 
               />} />
+
+            <Route exact path='/news' element={<PagesNews newsData={newsData} />} />
+            <Route exact path='/news/1' element={<Page newsData={newsData} />} />
+
+
+            {/* footer link  */}
+
+            <Route exact path='/our&service' element={<OurService />} />
+            <Route exact path='/contant&us' element={<ContantUs />} />
+            <Route exact path='/our&enterprise' element={<OurEnterprise newsData={newsData} />} />
+            
           </Routes>
 
           <Footer />

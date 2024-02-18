@@ -2,7 +2,7 @@ import React from 'react';
 
 import Card from '../Card/Card.jsx';
 
-const ProductList = ({ active, shoesData, currentItems, filteredProducts }) => {
+const ProductList = ({ active, setModalActive, currentItems, modalActive }) => {
 
   return (
     <div className={active ? "shoes__buy active" : "shoes__buy"}>
@@ -11,6 +11,8 @@ const ProductList = ({ active, shoesData, currentItems, filteredProducts }) => {
           <Card
             id={shoes}
             shoes={shoes}
+            active={modalActive}
+            setActive={setModalActive}
           />
         );
       })}

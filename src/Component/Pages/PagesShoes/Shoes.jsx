@@ -122,11 +122,11 @@ const Shoes = ({ shoesData }) => {
         <Swiper
           modules={[Navigation, Pagination, Scrollbar, A11y]}
           spaceBetween={50}
-          // autoplay={{
-          //   delay: 4000,
-          //   disableOnInteraction: false,
-          //   stopOnLastSlide: false,
-          // }}
+          autoplay={{
+            delay: 4000,
+            disableOnInteraction: false,
+            stopOnLastSlide: false,
+          }}
           slidesPerView={4}
           scrollbar={{ draggable: true }}
           className="recommendation"

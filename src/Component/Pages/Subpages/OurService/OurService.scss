@@ -1,0 +1,114 @@
+.section__services .container {
+  padding-top: 120px;
+  width: 1100px;
+  margin: 0 auto;
+  padding-bottom: 0px;
+
+  .btn {
+    background-color: #fff;
+    font-size: 20px;
+    padding: 8px 12px;
+    width: 80px;
+    margin-bottom: 40px;
+  }
+  .customize__product, .gift__card, .maintain__repair {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+
+    .container__img {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+
+      .img {
+        box-shadow: 0px 5px 11px rgba(255, 255, 255, 0.2);
+        width: auto;
+      }
+
+      .title__h2 {
+        color: #FFF;
+        text-align: center;
+        font-size: 64px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 64px;
+        padding-bottom: 30px;
+      }
+
+      .btn {
+        padding: 8px 20px;
+        margin-bottom: 30px;
+        color: #000;
+      }
+    }
+
+    .form__text {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      width: auto;
+      max-width: 600px;
+      height: auto;
+      padding: 20px;
+      border-radius: 30px;
+      margin-bottom: 40px;
+
+      .title__h6 {
+        color: #ffffff;
+        font-size: 29px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 44px;
+        padding-bottom: 25px;
+        text-align: left;
+      }
+
+      ul {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: flex-end;
+      }
+
+      ul li {
+        width: 100%;
+        padding: 8px 0px;
+        color: #ffffff;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 24px;
+        text-align: right;
+
+        hr {
+          width: 100%;
+          height: 2xp;
+          color: #ffffff;
+        }
+      }
+    }
+  }
+
+
+  .gift__card {
+    align-items: center;
+    .form__text {
+      align-items: flex-start;
+      ul {
+        align-items: flex-start;
+        li {
+          text-align: left;
+        }
+      }
+    }
+  }
+
+  .maintain__repair {
+    .form__text {
+      .title__h6 {
+        text-align: right;
+      }
+    }
+  }
+}

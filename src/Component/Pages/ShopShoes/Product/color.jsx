@@ -29,6 +29,9 @@ const colorId = (color) => {
     if (color === 9) {
       return 'Orange'
     }
+    if (color === 10) {
+      return 'Gray'
+    }
   }
 
 export default colorId;
