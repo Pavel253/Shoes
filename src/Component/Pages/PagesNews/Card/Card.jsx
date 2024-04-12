@@ -7,7 +7,6 @@ const Card = ({ data }) => {
 
       <h3 className='title__h3'>{data.title}</h3>
       <p className='text'>{data.text}</p>
-      <button className='btn'>in detail</button>
     </div>
   );
 };

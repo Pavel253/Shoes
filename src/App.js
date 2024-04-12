@@ -22,6 +22,7 @@ import ContantUs from './Component/Pages/Subpages/ContantUs/ContantUs.jsx';
 import OurEnterprise from './Component/Pages/Subpages/OurEnterprise/OurEnterprise.jsx';
 import PagesNews from './Component/Pages/PagesNews/PagesNews.jsx';
 import Page from './Component/Pages/PagesNews/Page/Page.jsx';
+import NeedHelp from './Component/Pages/Subpages/NeedHelp/NeedHelp.jsx';
 
 
 function App() {
@@ -171,7 +172,8 @@ function App() {
             <Route exact path='/our&service' element={<OurService />} />
             <Route exact path='/contant&us' element={<ContantUs />} />
             <Route exact path='/our&enterprise' element={<OurEnterprise newsData={newsData} />} />
-            
+            <Route exact path='/you&help' element={<NeedHelp newsData={newsData} />} />
+
           </Routes>
 
           <Footer />

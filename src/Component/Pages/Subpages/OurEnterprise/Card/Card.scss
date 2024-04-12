@@ -9,7 +9,7 @@
   "c b"
   ;
   .title__h3 {
-    padding-top: 50px;
+    padding-top: 100px;
     height: 30px;
     grid-area: a;
     color: #000000;
@@ -24,9 +24,11 @@
     font-style: normal;
     font-weight: 500;
     line-height: 20px;
-    padding-bottom: 32px;
+    margin-bottom: 75px;
     grid-area: c;
     padding-right: 40px;
+    height: 120px;
+    overflow: hidden;
   }
   .img__news {
     grid-area: b;
@@ -75,9 +77,10 @@
     font-weight: 500;
     line-height: 20px;
     grid-area: c;
-    height: 150px;
+    height: 110px;
     overflow: hidden;
     padding-top: 10px;
+    
   }
   .img__news {
     grid-area: b;
@@ -128,7 +131,7 @@
     font-weight: 500;
     line-height: 20px;
     grid-area: c;
-    height: 150px;
+    height: 110px;
     overflow: hidden;
     padding-top: 10px;
   }

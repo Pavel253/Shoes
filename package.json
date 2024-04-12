@@ -8,6 +8,7 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "axios": "^1.5.1",
+    "concurrently": "^8.2.2",
     "framer-motion": "^10.16.5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -16,12 +17,13 @@
     "react-scripts": "5.0.1",
     "react-scroll": "^1.9.0",
     "react-select": "^5.8.0",
-    "react-yandex-maps": "^4.6.0",
     "swiper": "^10.3.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "concurrently \"npm run start-react\" \"npm run start-django\"",
+    "start-react": "react-scripts start",
+    "start-django": "cd django && python3 manage.py runserver",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"

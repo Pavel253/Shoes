@@ -1,0 +1,164 @@
+.title {
+  color: #FFF;
+  font-size: 54px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.need__help {
+
+  .shipping__str {
+    position: relative;
+    width: 100%;
+    height: 1000px;
+
+    .img__truck {
+      position: absolute;
+      top: -200px;
+      width: 100%;
+      height: 1200px;
+    }
+
+    .chadow {
+      position: absolute;
+      top: -200px;
+      width: 100%;
+      height: 1200px;
+      background-color: #000000ad;
+    }
+
+    .container {
+      width: 1300px;
+      height: 300px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+
+
+
+      .text {
+        width: 1000px;
+        padding-top: 60px;
+        color: #FFF;
+        font-size: 22px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+
+    }
+  }
+
+}
+
+.return__exchanges {
+  margin-top: 60px;
+
+  .container {
+    width: 1300px;
+    margin: 0 auto;
+
+    .title {
+      text-align: right;
+    }
+
+    .ul {
+      padding-top: 30px;
+
+      li {
+        text-align: right;
+
+        color: #FFF;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        padding: 8px 0px;
+      }
+    }
+  }
+}
+
+.rewards {
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    .title {
+      padding-bottom: 40px;
+    }
+
+    ul {
+      padding: 10px 25px;
+      border-radius: 15px;
+      background-color: #ffffffe7;
+
+      .reward {
+        text-align: right;
+        color: #000000;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        padding: 12px 0px;
+      }
+    }
+  }
+}
+
+.loyalty__program {
+  .text {
+    margin-top: 40px;
+    background-color: #ffffffe7;
+    padding: 20px 25px;
+    border-radius: 10px;
+    width: 760px;
+    text-align: left;
+    color: #000000;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px;
+  }
+}
+
+.your__product {
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    .ul {
+      padding: 12px 24px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      margin-top: 60px;
+      background-color: #ffffffe7;
+      border-radius: 12px;
+      li {
+        width: 1000px;
+        color: #000000;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 30px;
+        text-align: right;
+        padding: 6px 12px;
+      }
+    }
+  }
+}
+
+.sports__trends {
+  .container {
+    .title {
+      text-align: center;
+      padding-bottom: 60px;
+    }
+  }
+}

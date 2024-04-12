@@ -21,6 +21,41 @@ const Footer = () => {
     window.scrollTo(0, 0); 
     history('/our&enterprise');
   }
+  const handleClickAcc = () => {
+    window.scrollTo(0, 0); 
+    history('/user');
+  }
+
+
+  const handleClickNeed1 = () => {
+    window.scrollTo(0, 0); 
+    history('/you&help');
+  }
+  const handleClickNeed2 = () => {
+    window.scrollTo(1920, 1000); 
+    history('/you&help');
+  }
+  const handleClickNeed3 = () => {
+    window.scrollTo(1920, 1500); 
+    history('/you&help');
+  }
+  const handleClickNeed4 = () => {
+    window.scrollTo(1920, 1800); 
+    history('/you&help');
+  }
+  const handleClickNeed5 = () => {
+    window.scrollTo(1920, 2300); 
+    history('/you&help');
+  }
+  const handleClickNeed6 = () => {
+    window.scrollTo(1920, 2900); 
+    history('/you&help');
+  }
+  const handleClickNeed7 = () => {
+    window.scrollTo(1920, 3700); 
+    history('/you&help');
+  }
+  
   return (
     <footer className="footer">
       <div className="container">
@@ -83,15 +118,14 @@ const Footer = () => {
             <div className="navigation_max nav">
               <h5>NEED HELP ?</h5>
               <ul>
-                <li>My Account</li>
-                <li>Shipping</li>
-                <li>Return & Exchanges</li>
-
-                <li>FAQs</li>
-                <li>Rewards</li>
-                <li>Loyalty program</li>
-                <li>How to choose your product?</li>
-                <li>Sports Trends</li>
+                <li onClick={handleClickAcc}>My Account</li>
+                <li onClick={handleClickNeed1}>Shipping</li>
+                <li onClick={handleClickNeed2}>Return & Exchanges</li>
+                <li onClick={handleClickNeed3}>FAQs</li>
+                <li onClick={handleClickNeed4}>Rewards</li>
+                <li onClick={handleClickNeed5}>Loyalty program</li>
+                <li onClick={handleClickNeed6}>How to choose your product?</li>
+                <li onClick={handleClickNeed7}>Sports Trends</li>
               </ul>
             </div>
           </div>
